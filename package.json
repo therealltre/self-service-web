@@ -15,6 +15,9 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-install-render": "^1.0.9",
+    "render": "^0.1.4",
     "yup": "^1.0.2"
   },
   "devDependencies": {

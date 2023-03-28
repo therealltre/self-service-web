@@ -3,6 +3,8 @@ import instaLogo from "../public/compLogo.png";
 import Image from "next/image";
 import { useFormik, Field } from "formik";
 import * as Yup from "yup";
+import Dropzone from "react-dropzone";
+import render from "react-dom";
 
 export default function Home() {
   const formik = useFormik({
@@ -10,6 +12,8 @@ export default function Home() {
       agent_name: "",
       agent_accountname: "",
       agent_email: "",
+      agent_gender: "",
+      marital_status: "",
       prime_number: "PI123456789",
       comp_name: "",
       business_address: "",
@@ -24,6 +28,9 @@ export default function Home() {
       secondary_contact_email: "",
       number_of_outlets: "0",
       image_upload: [],
+      next_of_kin_name: "",
+      next_of_kin_email: "",
+      next_of_kin_mobile: "",
       terms: ""
     },
 
@@ -38,7 +45,7 @@ export default function Home() {
     }
   });
 
-  console.log(formik.errors);
+  console.log(formik.values);
 
   return (
     <div>
@@ -116,10 +123,9 @@ export default function Home() {
                 </label>
                 <input
                   className="border-2 border-gray-400 rounded-md p-2 w-[250px] h-[40px] focus:border-blue-500
-                   focus:ring-blue-500 disabled:opacity-70 bg-gray-200"
+                   focus:ring-blue-500"
                   type="text"
                   name="prime_number"
-                  disabled
                   placeholder="Enter account number "
                   value={formik.values.prime_number}
                   onChange={formik.handleChange}
@@ -238,6 +244,74 @@ export default function Home() {
                   onChange={formik.handleChange}
                 />
               </div>
+              <div className="pb-4 flex items-center" id="agent_gender">
+                <div className="flex items-start">
+                  <label
+                    htmlFor=" Gender"
+                    className="block font-opensans pb-2 mr-2"
+                  >
+                    Gender:
+                  </label>
+                  <div className="grid grid-cols-1" id="gender options">
+                    <div className="flex items-center pb-5" id="male">
+                      <input
+                        className="border-2 border-gray-500 rounded-md p-2 mr-2 w-5 h-5 focus:border-blue-500 focus:ring-blue-500"
+                        type="radio"
+                        name="agent_gender"
+                        value="male"
+                        onChange={formik.handleChange}
+                      />
+                      <label htmlFor="male" className="mr-2">
+                        Male
+                      </label>
+                    </div>
+                    <div className="flex items-center" id="female">
+                      <input
+                        className="border-2 border-gray-500 rounded-md p-2 mr-2 w-5 h-5 focus:border-blue-500 focus:ring-blue-500"
+                        type="radio"
+                        name="agent_gender"
+                        value="female"
+                        onChange={formik.handleChange}
+                      />
+                      <label htmlFor="female">Female</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pb-4 flex items-center" id="marital status">
+                <div className="flex items-start">
+                  <label
+                    htmlFor=" Marriage Status"
+                    className="block font-opensans pb-2 mr-2"
+                  >
+                    Marrital Status:
+                  </label>
+                  <div className="grid grid-cols-1" id="status options">
+                    <div className="flex items-center pb-5" id="married">
+                      <input
+                        className="border-2 border-gray-500 rounded-md p-2 mr-2 w-5 h-5 focus:border-blue-500 focus:ring-blue-500"
+                        type="radio"
+                        name="marital_status"
+                        value="Married"
+                        onChange={formik.handleChange}
+                      />
+                      <label htmlFor="male" className="mr-2">
+                        Married
+                      </label>
+                    </div>
+                    <div className="flex items-center" id="female">
+                      <input
+                        className="border-2 border-gray-500 rounded-md p-2 mr-2 w-5 h-5 focus:border-blue-500 focus:ring-blue-500"
+                        type="radio"
+                        name="marital_status"
+                        value="Single"
+                        onChange={formik.handleChange}
+                      />
+                      <label htmlFor="female">Single</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/*Contact section */}
@@ -247,7 +321,7 @@ export default function Home() {
             <div className="mt-6 grid lg:grid-cols-3 md:grid-cols-2 gap-4 ">
               <div className="pb-4" id="primary contact name">
                 <label
-                  htmlFor=" agent name"
+                  htmlFor=" primary contact name"
                   className="block font-opensans pb-2"
                 >
                   Primary Contact Name
@@ -335,6 +409,45 @@ export default function Home() {
                   onChange={formik.handleChange}
                 />
               </div>
+              <div className="pb-4" id="next_of_kin_name">
+                <label htmlFor=" email" className="block font-opensans pb-2">
+                  Next Of Kin
+                </label>
+                <input
+                  className="border-2 border-gray-500 rounded-md p-2 w-[250px] h-[40px] focus:border-blue-500 focus:ring-blue-500"
+                  type="text"
+                  name="next_of_kin_name"
+                  placeholder="Enter name "
+                  value={formik.values.next_of_kin_name}
+                  onChange={formik.handleChange}
+                />
+              </div>
+              <div className="pb-4" id="next_of_kin_mobile">
+                <label htmlFor=" email" className="block font-opensans pb-2">
+                  Next Of Kin Mobile Number
+                </label>
+                <input
+                  className="border-2 border-gray-500 rounded-md p-2 w-[250px] h-[40px] focus:border-blue-500 focus:ring-blue-500"
+                  type="number"
+                  name="next_of_kin_mobile"
+                  placeholder="Enter mobile number"
+                  value={formik.values.next_of_kin_mobile}
+                  onChange={formik.handleChange}
+                />
+              </div>
+              <div className="pb-4" id="next_of_kin_email">
+                <label htmlFor=" email" className="block font-opensans pb-2">
+                  Next Of Kin Email
+                </label>
+                <input
+                  className="border-2 border-gray-500 rounded-md p-2 w-[250px] h-[40px] focus:border-blue-500 focus:ring-blue-500"
+                  type="email"
+                  name="next_of_kin_email"
+                  placeholder="Enter email address "
+                  value={formik.values.next_of_kin_email}
+                  onChange={formik.handleChange}
+                />
+              </div>
             </div>
 
             {/*Declaration section */}
@@ -347,7 +460,7 @@ export default function Home() {
               <div className="pb-4 " id="terms">
                 <div className="flex items-start gap-2">
                   <input
-                    className="border-2 border-gray-500 rounded-md h-5 w-5 focus:border-blue-500 focus:ring-blue-500"
+                    className="border-2 border-gray-500 rounded-md h-6 w-6 focus:border-blue-500 focus:ring-blue-500"
                     type="checkbox"
                     name="terms"
                     value="checked"
@@ -372,12 +485,7 @@ export default function Home() {
                 type="file"
                 name="image_upload"
                 multiple
-                onChange={(event) => {
-                  setFieldValue(
-                    "image_upload",
-                    event.currentTarget.image_upload
-                  );
-                }}
+                onChange={formik.handleChange}
                 className="block w-full text-sm text-slate-500
                 file:mr-4 file:py-2 file:px-4
                 file:rounded-md file:border-0
