@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.4.2",
+    "axios": "^1.4.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
-    "formik": "^2.2.9",
+    "formik": "^3.3.0",
+    "html2canvas": "^1.4.1",
+    "html2pdf": "^0.0.11",
+    "html2pdf.js": "^0.10.1",
+    "jspdf": "^2.5.1",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
