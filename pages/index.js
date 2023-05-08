@@ -50,8 +50,9 @@ export default function Home() {
                 axios.post("/api/axiosInstance", values).then((response) => {
                   console.log(response.data);
                   console.log(values);
-                  router.push({ pathname: "/loan", query: values });
                 });
+
+                router.push({ pathname: "/loan", query: values });
               }}
             >
               {({ values, handleChange }) => (
