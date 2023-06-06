@@ -27,7 +27,7 @@ export default function Success() {
         <div className="flex justify-center mt-8">
           <Button
             type="submit"
-            onClick={() => router.push({ pathname: "../" })}
+            onClick={() => router.push({ pathname: "/" })}
             className="bg-blue-700 text-sm text-white p-2  rounded-md w-1/2"
           >
             Ok
