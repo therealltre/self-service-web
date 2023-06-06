@@ -20,7 +20,7 @@ export default function Success() {
           Your loan request is being processed.{" "}
         </h1>
         <h2 className="text-xl pb-4 text-gray-500 font-sans flex justify-center">
-          Please wait for SMS confirmation. {router.query.merchant_number}
+          Please wait for SMS confirmation. {router.query.mobile_no}
         </h2>
 
         <div className="flex justify-center mt-8">

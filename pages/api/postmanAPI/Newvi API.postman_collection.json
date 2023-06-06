@@ -1,0 +1,1590 @@
+{
+  "info": {
+    "_postman_id": "474dc4e2-e639-445e-99d7-cccba6585201",
+    "name": "Newvi API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Loans",
+      "item": [
+        {
+          "name": "Loan Request",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobile_no\": \"0234556711\",\r\n    \"loanAmount\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Disburse Loan",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobile_no\": \"0234556711\",\r\n    \"loanAmount\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/:id/disburse",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", ":id", "disburse"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reject",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 7b07a6e649fff4bff0c58a48c6e2c5a05e56c0b6",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/:id/reject",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", ":id", "reject"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Approve",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobile_no\": \"0234556711\",\r\n    \"loanAmount\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/:id/approve",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", ":id", "approve"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Loan Application",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"loanAmount\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Disburse Loan",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"loanAmount\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/api/loans/",
+              "host": ["{{apiUrl}}api"],
+              "path": ["api", "loans", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reject Loan",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"loanAmount\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/api/loans/",
+              "host": ["{{apiUrl}}api"],
+              "path": ["api", "loans", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Loans",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Pending Loans",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/pending",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", "pending"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Approved Loans",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/approved",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", "approved"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Awaiting Disbursal",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/approved",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", "approved"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Distbursed",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 7b07a6e649fff4bff0c58a48c6e2c5a05e56c0b6",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/disbursed",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", "disbursed"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "View Loan Details",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/:id",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Loan",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 1,\r\n    \"loanAmount\": 3000,\r\n    \"loanDuration\": 24,\r\n    \"approvedAmount\": 2500,\r\n    \"mobile\": null,\r\n    \"user\": null\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/loans/:id",
+              "host": ["{{apiUrl}}api"],
+              "path": ["loans", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "View Loans Applications",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"loanAmount\": 3000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/api/loans/",
+              "host": ["{{apiUrl}}api"],
+              "path": ["api", "loans", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "USSD",
+      "item": [
+        {
+          "name": "Ussd Subcribe",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobile_no\": \"0234556711\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/ussd/subscribe",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "ussd", "subscribe"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ussd List",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobile_no\": \"02020202020\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/ussd/list_subscription",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "ussd", "list_subscription"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ussd Un-Subcribe",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [""],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobile_no\": \"02020202020\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/ussd/unsubscribe",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "ussd", "unsubscribe"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Agents",
+      "item": [
+        {
+          "name": "Get All Agents",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const moment = require(\"moment\")\r",
+                  "var names = [\"Aaran\", \"Aaren\", \"Aarez\", \"Aarman\", \"Aaron\", \"Aaron-James\", \"Aarron\", \"Aaryan\", \"Aaryn\", \"Aayan\", \"Aazaan\", \"Abaan\", \"Abbas\", \"Abdallah\", \"Abdalroof\", \"Abdihakim\", \"Abdirahman\", \"Abdisalam\", \"Abdul\", \"Abdul-Aziz\", \"Abdulbasir\", \"Abdulkadir\", \"Abdulkarem\", \"Abdulkhader\", \"Abdullah\", \"Abdul-Majeed\", \"Abdulmalik\", \"Abdul-Rehman\", \"Abdur\", \"Abdurraheem\", \"Abdur-Rahman\", \"Abdur-Rehmaan\", \"Abel\", \"Abhinav\", \"Abhisumant\", \"Abid\", \"Abir\", \"Abraham\", \"Abu\", \"Abubakar\", \"Ace\", \"Adain\", \"Adam\", \"Adam-James\", \"Addison\", \"Addisson\", \"Adegbola\", \"Adegbolahan\", \"Aden\", \"Adenn\", \"Adie\", \"Adil\", \"Aditya\", \"Adnan\", \"Adrian\", \"Adrien\", \"Aedan\", \"Aedin\", \"Aedyn\", \"Aeron\", \"Afonso\", \"Ahmad\", \"Ahmed\", \"Ahmed-Aziz\", \"Ahoua\", \"Ahtasham\", \"Aiadan\", \"Aidan\", \"Aiden\", \"Aiden-Jack\", \"Aiden-Vee\", \"Aidian\", \"Aidy\", \"Ailin\", \"Aiman\", \"Ainsley\", \"Ainslie\", \"Airen\", \"Airidas\", \"Airlie\", \"AJ\", \"Ajay\", \"A-Jay\", \"Ajayraj\", \"Akan\", \"Akram\", \"Al\", \"Ala\", \"Alan\", \"Alanas\", \"Alasdair\", \"Alastair\", \"Alber\", \"Albert\", \"Albie\", \"Aldred\", \"Alec\", \"Aled\", \"Aleem\", \"Aleksandar\", \"Aleksander\", \"Aleksandr\", \"Aleksandrs\", \"Alekzander\", \"Alessandro\", \"Alessio\", \"Alex\", \"Alexander\", \"Alexei\", \"Alexx\", \"Alexzander\", \"Alf\", \"Alfee\", \"Alfie\", \"Alfred\", \"Alfy\", \"Alhaji\", \"Al-Hassan\", \"Ali\", \"Aliekber\", \"Alieu\", \"Alihaider\", \"Alisdair\", \"Alishan\", \"Alistair\", \"Alistar\", \"Alister\", \"Aliyaan\", \"Allan\", \"Allan-Laiton\", \"Allen\", \"Allesandro\", \"Allister\", \"Ally\", \"Alphonse\", \"Altyiab\", \"Alum\", \"Alvern\", \"Alvin\", \"Alyas\", \"Amaan\", \"Aman\", \"Amani\", \"Ambanimoh\", \"Ameer\", \"Amgad\", \"Ami\", \"Amin\", \"Amir\", \"Ammaar\", \"Ammar\", \"Ammer\", \"Amolpreet\", \"Amos\", \"Amrinder\", \"Amrit\", \"Amro\", \"Anay\", \"Andrea\", \"Andreas\", \"Andrei\", \"Andrejs\", \"Andrew\", \"Andy\", \"Anees\", \"Anesu\", \"Angel\", \"Angelo\", \"Angus\", \"Anir\", \"Anis\", \"Anish\", \"Anmolpreet\", \"Annan\", \"Anndra\", \"Anselm\", \"Anthony\", \"Anthony-John\", \"Antoine\", \"Anton\", \"Antoni\", \"Antonio\", \"Antony\", \"Antonyo\", \"Anubhav\", \"Aodhan\", \"Aon\", \"Aonghus\", \"Apisai\", \"Arafat\", \"Aran\", \"Arandeep\", \"Arann\", \"Aray\", \"Arayan\", \"Archibald\", \"Archie\", \"Arda\", \"Ardal\", \"Ardeshir\", \"Areeb\", \"Areez\", \"Aref\", \"Arfin\", \"Argyle\", \"Argyll\", \"Ari\", \"Aria\", \"Arian\", \"Arihant\", \"Aristomenis\", \"Aristotelis\", \"Arjuna\", \"Arlo\", \"Armaan\", \"Arman\", \"Armen\", \"Arnab\", \"Arnav\", \"Arnold\", \"Aron\", \"Aronas\", \"Arran\", \"Arrham\", \"Arron\", \"Arryn\", \"Arsalan\", \"Artem\", \"Arthur\", \"Artur\", \"Arturo\", \"Arun\", \"Arunas\", \"Arved\", \"Arya\", \"Aryan\", \"Aryankhan\", \"Aryian\", \"Aryn\", \"Asa\", \"Asfhan\", \"Ash\", \"Ashlee-jay\", \"Ashley\", \"Ashton\", \"Ashton-Lloyd\", \"Ashtyn\", \"Ashwin\", \"Asif\", \"Asim\", \"Aslam\", \"Asrar\", \"Ata\", \"Atal\", \"Atapattu\", \"Ateeq\", \"Athol\", \"Athon\", \"Athos-Carlos\", \"Atli\", \"Atom\", \"Attila\", \"Aulay\", \"Aun\", \"Austen\", \"Austin\", \"Avani\", \"Averon\", \"Avi\", \"Avinash\", \"Avraham\", \"Awais\", \"Awwal\", \"Axel\", \"Ayaan\", \"Ayan\", \"Aydan\", \"Ayden\", \"Aydin\", \"Aydon\", \"Ayman\", \"Ayomide\", \"Ayren\", \"Ayrton\", \"Aytug\", \"Ayub\", \"Ayyub\", \"Azaan\", \"Azedine\", \"Azeem\", \"Azim\", \"Aziz\", \"Azlan\", \"Azzam\", \"Azzedine\", \"Babatunmise\", \"Babur\", \"Bader\", \"Badr\", \"Badsha\", \"Bailee\", \"Bailey\", \"Bailie\", \"Bailley\", \"Baillie\", \"Baley\", \"Balian\", \"Banan\", \"Barath\", \"Barkley\", \"Barney\", \"Baron\", \"Barrie\", \"Barry\", \"Bartlomiej\", \"Bartosz\", \"Basher\", \"Basile\", \"Baxter\", \"Baye\", \"Bayley\", \"Beau\", \"Beinn\", \"Bekim\", \"Believe\", \"Ben\", \"Bendeguz\", \"Benedict\", \"Benjamin\", \"Benjamyn\", \"Benji\", \"Benn\", \"Bennett\", \"Benny\", \"Benoit\", \"Bentley\", \"Berkay\", \"Bernard\", \"Bertie\", \"Bevin\", \"Bezalel\", \"Bhaaldeen\", \"Bharath\", \"Bilal\", \"Bill\", \"Billy\", \"Binod\", \"Bjorn\", \"Blaike\", \"Blaine\", \"Blair\", \"Blaire\", \"Blake\", \"Blazej\", \"Blazey\", \"Blessing\", \"Blue\", \"Blyth\", \"Bo\", \"Boab\", \"Bob\", \"Bobby\", \"Bobby-Lee\", \"Bodhan\", \"Boedyn\", \"Bogdan\", \"Bohbi\", \"Bony\", \"Bowen\", \"Bowie\", \"Boyd\", \"Bracken\", \"Brad\", \"Bradan\", \"Braden\", \"Bradley\", \"Bradlie\", \"Bradly\", \"Brady\", \"Bradyn\", \"Braeden\", \"Braiden\", \"Brajan\", \"Brandan\", \"Branden\", \"Brandon\", \"Brandonlee\", \"Brandon-Lee\", \"Brandyn\", \"Brannan\", \"Brayden\", \"Braydon\", \"Braydyn\", \"Breandan\", \"Brehme\", \"Brendan\", \"Brendon\", \"Brendyn\", \"Breogan\", \"Bret\", \"Brett\", \"Briaddon\", \"Brian\", \"Brodi\", \"Brodie\", \"Brody\", \"Brogan\", \"Broghan\", \"Brooke\", \"Brooklin\", \"Brooklyn\", \"Bruce\", \"Bruin\", \"Bruno\", \"Brunon\", \"Bryan\", \"Bryce\", \"Bryden\", \"Brydon\", \"Brydon-Craig\", \"Bryn\", \"Brynmor\", \"Bryson\", \"Buddy\", \"Bully\", \"Burak\", \"Burhan\", \"Butali\", \"Butchi\", \"Byron\", \"Cabhan\", \"Cadan\", \"Cade\", \"Caden\", \"Cadon\", \"Cadyn\", \"Caedan\", \"Caedyn\", \"Cael\", \"Caelan\", \"Caelen\", \"Caethan\", \"Cahl\", \"Cahlum\", \"Cai\", \"Caidan\", \"Caiden\", \"Caiden-Paul\", \"Caidyn\", \"Caie\", \"Cailaen\", \"Cailean\", \"Caileb-John\", \"Cailin\", \"Cain\", \"Caine\", \"Cairn\", \"Cal\", \"Calan\", \"Calder\", \"Cale\", \"Calean\", \"Caleb\", \"Calen\", \"Caley\", \"Calib\", \"Calin\", \"Callahan\", \"Callan\", \"Callan-Adam\", \"Calley\", \"Callie\", \"Callin\", \"Callum\", \"Callun\", \"Callyn\", \"Calum\", \"Calum-James\", \"Calvin\", \"Cambell\", \"Camerin\", \"Cameron\", \"Campbel\", \"Campbell\", \"Camron\", \"Caolain\", \"Caolan\", \"Carl\", \"Carlo\", \"Carlos\", \"Carrich\", \"Carrick\", \"Carson\", \"Carter\", \"Carwyn\", \"Casey\", \"Casper\", \"Cassy\", \"Cathal\", \"Cator\", \"Cavan\", \"Cayden\", \"Cayden-Robert\", \"Cayden-Tiamo\", \"Ceejay\", \"Ceilan\", \"Ceiran\", \"Ceirin\", \"Ceiron\", \"Cejay\", \"Celik\", \"Cephas\", \"Cesar\", \"Cesare\", \"Chad\", \"Chaitanya\", \"Chang-Ha\", \"Charles\", \"Charley\", \"Charlie\", \"Charly\", \"Chase\", \"Che\", \"Chester\", \"Chevy\", \"Chi\", \"Chibudom\", \"Chidera\", \"Chimsom\", \"Chin\", \"Chintu\", \"Chiqal\", \"Chiron\", \"Chris\", \"Chris-Daniel\", \"Chrismedi\", \"Christian\", \"Christie\", \"Christoph\", \"Christopher\", \"Christopher-Lee\", \"Christy\", \"Chu\", \"Chukwuemeka\", \"Cian\", \"Ciann\", \"Ciar\", \"Ciaran\", \"Ciarian\", \"Cieran\", \"Cillian\", \"Cillin\", \"Cinar\", \"CJ\", \"C-Jay\", \"Clark\", \"Clarke\", \"Clayton\", \"Clement\", \"Clifford\", \"Clyde\", \"Cobain\", \"Coban\", \"Coben\", \"Cobi\", \"Cobie\", \"Coby\", \"Codey\", \"Codi\", \"Codie\", \"Cody\", \"Cody-Lee\", \"Coel\", \"Cohan\", \"Cohen\", \"Colby\", \"Cole\", \"Colin\", \"Coll\", \"Colm\", \"Colt\", \"Colton\", \"Colum\", \"Colvin\", \"Comghan\", \"Conal\", \"Conall\", \"Conan\", \"Conar\", \"Conghaile\", \"Conlan\", \"Conley\", \"Conli\", \"Conlin\", \"Conlly\", \"Conlon\", \"Conlyn\", \"Connal\", \"Connall\", \"Connan\", \"Connar\", \"Connel\", \"Connell\", \"Conner\", \"Connolly\", \"Connor\", \"Connor-David\", \"Conor\", \"Conrad\", \"Cooper\", \"Copeland\", \"Coray\", \"Corben\", \"Corbin\", \"Corey\", \"Corey-James\", \"Corey-Jay\", \"Cori\", \"Corie\", \"Corin\", \"Cormac\", \"Cormack\", \"Cormak\", \"Corran\", \"Corrie\", \"Cory\", \"Cosmo\", \"Coupar\", \"Craig\", \"Craig-James\", \"Crawford\", \"Creag\", \"Crispin\", \"Cristian\", \"Crombie\", \"Cruiz\", \"Cruz\", \"Cuillin\", \"Cullen\", \"Cullin\", \"Curtis\", \"Cyrus\", \"Daanyaal\", \"Daegan\", \"Daegyu\", \"Dafydd\", \"Dagon\", \"Dailey\", \"Daimhin\", \"Daithi\", \"Dakota\", \"Daksh\", \"Dale\", \"Dalong\", \"Dalton\", \"Damian\", \"Damien\", \"Damon\", \"Dan\", \"Danar\", \"Dane\", \"Danial\", \"Daniel\", \"Daniele\", \"Daniel-James\", \"Daniels\", \"Daniil\", \"Danish\", \"Daniyal\", \"Danniel\", \"Danny\", \"Dante\", \"Danyal\", \"Danyil\", \"Danys\", \"Daood\", \"Dara\", \"Darach\", \"Daragh\", \"Darcy\", \"D'arcy\", \"Dareh\", \"Daren\", \"Darien\", \"Darius\", \"Darl\", \"Darn\", \"Darrach\", \"Darragh\", \"Darrel\", \"Darrell\", \"Darren\", \"Darrie\", \"Darrius\", \"Darroch\", \"Darryl\", \"Darryn\", \"Darwyn\", \"Daryl\", \"Daryn\", \"Daud\", \"Daumantas\", \"Davi\", \"David\", \"David-Jay\"]\r",
+                  "\r",
+                  "// var firstname = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "// var lastName = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "var firstname = names[Math.floor(Math.random() * names.length)];\r",
+                  "var lastName =  names[Math.floor(Math.random() * names.length)];\r",
+                  "\r",
+                  "var d = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "var dob = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "\r",
+                  "var dateNow = moment.now().format('YYYY-MM-DD')\r",
+                  "var phone = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var momo = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var phoneSecondary = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "\r",
+                  "console.log(phone)\r",
+                  "\r",
+                  "// function randomDate(start, end) {\r",
+                  "//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+                  "// }\r",
+                  "\r",
+                  "// const d = randomDate(new Date(2012, 0, 1), new Date());\r",
+                  "console.log(d);\r",
+                  "\r",
+                  "var fullName = firstname+' '+lastName\r",
+                  "\r",
+                  "\r",
+                  "pm.variables.set('name', fullName)\r",
+                  "pm.variables.set('company_name', fullName+ 'Company')\r",
+                  "pm.variables.set('dob', dob)\r",
+                  "pm.variables.set('mobile_no', phone )\r",
+                  "pm.variables.set('password', '1234566789')\r",
+                  "pm.variables.set('email', phone+'@insta.com')\r",
+                  "pm.variables.set('is_active', true)\r",
+                  "pm.variables.set('account_name', fullName)\r",
+                  "pm.variables.set('primei_acc_num', phone)\r",
+                  "pm.variables.set('business_address', fullName+' Address')\r",
+                  "pm.variables.set('business_email', phone+'@gmail.com')\r",
+                  "pm.variables.set('mobile_money_number', momo)\r",
+                  "pm.variables.set('nature_of_business', firstname)\r",
+                  "pm.variables.set('number_of_outlets', Math.ceil(Math.random(19999)))\r",
+                  "pm.variables.set('business_reg_no', phone+momo)\r",
+                  "pm.variables.set('primary_contact_name', fullName)\r",
+                  "pm.variables.set('primary_contact_mobile', phone)\r",
+                  "pm.variables.set('primary_email_address', phone+'@gmail.com')\r",
+                  "pm.variables.set('secondary_contact_name', firstname+lastName)\r",
+                  "pm.variables.set('secondary_contact_mobile', phoneSecondary)\r",
+                  "pm.variables.set('secondary_email_address', phoneSecondary+'@mail.com')\r",
+                  "pm.variables.set('next_of_kin_name', firstname+''+lastName)\r",
+                  "pm.variables.set('next_of_kin_mobile', phoneSecondary)\r",
+                  "pm.variables.set('next_of_kin_email', phoneSecondary+'@mail.com')\r",
+                  "pm.variables.set('declaration_agreement', true)\r",
+                  "pm.variables.set('consent_date', dateNow)"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/agents",
+              "host": ["{{apiUrl}}api"],
+              "path": ["agents"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Agent",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const moment = require(\"moment\")\r",
+                  "var names = [\"Aaran\", \"Aaren\", \"Aarez\", \"Aarman\", \"Aaron\", \"Aaron-James\", \"Aarron\", \"Aaryan\", \"Aaryn\", \"Aayan\", \"Aazaan\", \"Abaan\", \"Abbas\", \"Abdallah\", \"Abdalroof\", \"Abdihakim\", \"Abdirahman\", \"Abdisalam\", \"Abdul\", \"Abdul-Aziz\", \"Abdulbasir\", \"Abdulkadir\", \"Abdulkarem\", \"Abdulkhader\", \"Abdullah\", \"Abdul-Majeed\", \"Abdulmalik\", \"Abdul-Rehman\", \"Abdur\", \"Abdurraheem\", \"Abdur-Rahman\", \"Abdur-Rehmaan\", \"Abel\", \"Abhinav\", \"Abhisumant\", \"Abid\", \"Abir\", \"Abraham\", \"Abu\", \"Abubakar\", \"Ace\", \"Adain\", \"Adam\", \"Adam-James\", \"Addison\", \"Addisson\", \"Adegbola\", \"Adegbolahan\", \"Aden\", \"Adenn\", \"Adie\", \"Adil\", \"Aditya\", \"Adnan\", \"Adrian\", \"Adrien\", \"Aedan\", \"Aedin\", \"Aedyn\", \"Aeron\", \"Afonso\", \"Ahmad\", \"Ahmed\", \"Ahmed-Aziz\", \"Ahoua\", \"Ahtasham\", \"Aiadan\", \"Aidan\", \"Aiden\", \"Aiden-Jack\", \"Aiden-Vee\", \"Aidian\", \"Aidy\", \"Ailin\", \"Aiman\", \"Ainsley\", \"Ainslie\", \"Airen\", \"Airidas\", \"Airlie\", \"AJ\", \"Ajay\", \"A-Jay\", \"Ajayraj\", \"Akan\", \"Akram\", \"Al\", \"Ala\", \"Alan\", \"Alanas\", \"Alasdair\", \"Alastair\", \"Alber\", \"Albert\", \"Albie\", \"Aldred\", \"Alec\", \"Aled\", \"Aleem\", \"Aleksandar\", \"Aleksander\", \"Aleksandr\", \"Aleksandrs\", \"Alekzander\", \"Alessandro\", \"Alessio\", \"Alex\", \"Alexander\", \"Alexei\", \"Alexx\", \"Alexzander\", \"Alf\", \"Alfee\", \"Alfie\", \"Alfred\", \"Alfy\", \"Alhaji\", \"Al-Hassan\", \"Ali\", \"Aliekber\", \"Alieu\", \"Alihaider\", \"Alisdair\", \"Alishan\", \"Alistair\", \"Alistar\", \"Alister\", \"Aliyaan\", \"Allan\", \"Allan-Laiton\", \"Allen\", \"Allesandro\", \"Allister\", \"Ally\", \"Alphonse\", \"Altyiab\", \"Alum\", \"Alvern\", \"Alvin\", \"Alyas\", \"Amaan\", \"Aman\", \"Amani\", \"Ambanimoh\", \"Ameer\", \"Amgad\", \"Ami\", \"Amin\", \"Amir\", \"Ammaar\", \"Ammar\", \"Ammer\", \"Amolpreet\", \"Amos\", \"Amrinder\", \"Amrit\", \"Amro\", \"Anay\", \"Andrea\", \"Andreas\", \"Andrei\", \"Andrejs\", \"Andrew\", \"Andy\", \"Anees\", \"Anesu\", \"Angel\", \"Angelo\", \"Angus\", \"Anir\", \"Anis\", \"Anish\", \"Anmolpreet\", \"Annan\", \"Anndra\", \"Anselm\", \"Anthony\", \"Anthony-John\", \"Antoine\", \"Anton\", \"Antoni\", \"Antonio\", \"Antony\", \"Antonyo\", \"Anubhav\", \"Aodhan\", \"Aon\", \"Aonghus\", \"Apisai\", \"Arafat\", \"Aran\", \"Arandeep\", \"Arann\", \"Aray\", \"Arayan\", \"Archibald\", \"Archie\", \"Arda\", \"Ardal\", \"Ardeshir\", \"Areeb\", \"Areez\", \"Aref\", \"Arfin\", \"Argyle\", \"Argyll\", \"Ari\", \"Aria\", \"Arian\", \"Arihant\", \"Aristomenis\", \"Aristotelis\", \"Arjuna\", \"Arlo\", \"Armaan\", \"Arman\", \"Armen\", \"Arnab\", \"Arnav\", \"Arnold\", \"Aron\", \"Aronas\", \"Arran\", \"Arrham\", \"Arron\", \"Arryn\", \"Arsalan\", \"Artem\", \"Arthur\", \"Artur\", \"Arturo\", \"Arun\", \"Arunas\", \"Arved\", \"Arya\", \"Aryan\", \"Aryankhan\", \"Aryian\", \"Aryn\", \"Asa\", \"Asfhan\", \"Ash\", \"Ashlee-jay\", \"Ashley\", \"Ashton\", \"Ashton-Lloyd\", \"Ashtyn\", \"Ashwin\", \"Asif\", \"Asim\", \"Aslam\", \"Asrar\", \"Ata\", \"Atal\", \"Atapattu\", \"Ateeq\", \"Athol\", \"Athon\", \"Athos-Carlos\", \"Atli\", \"Atom\", \"Attila\", \"Aulay\", \"Aun\", \"Austen\", \"Austin\", \"Avani\", \"Averon\", \"Avi\", \"Avinash\", \"Avraham\", \"Awais\", \"Awwal\", \"Axel\", \"Ayaan\", \"Ayan\", \"Aydan\", \"Ayden\", \"Aydin\", \"Aydon\", \"Ayman\", \"Ayomide\", \"Ayren\", \"Ayrton\", \"Aytug\", \"Ayub\", \"Ayyub\", \"Azaan\", \"Azedine\", \"Azeem\", \"Azim\", \"Aziz\", \"Azlan\", \"Azzam\", \"Azzedine\", \"Babatunmise\", \"Babur\", \"Bader\", \"Badr\", \"Badsha\", \"Bailee\", \"Bailey\", \"Bailie\", \"Bailley\", \"Baillie\", \"Baley\", \"Balian\", \"Banan\", \"Barath\", \"Barkley\", \"Barney\", \"Baron\", \"Barrie\", \"Barry\", \"Bartlomiej\", \"Bartosz\", \"Basher\", \"Basile\", \"Baxter\", \"Baye\", \"Bayley\", \"Beau\", \"Beinn\", \"Bekim\", \"Believe\", \"Ben\", \"Bendeguz\", \"Benedict\", \"Benjamin\", \"Benjamyn\", \"Benji\", \"Benn\", \"Bennett\", \"Benny\", \"Benoit\", \"Bentley\", \"Berkay\", \"Bernard\", \"Bertie\", \"Bevin\", \"Bezalel\", \"Bhaaldeen\", \"Bharath\", \"Bilal\", \"Bill\", \"Billy\", \"Binod\", \"Bjorn\", \"Blaike\", \"Blaine\", \"Blair\", \"Blaire\", \"Blake\", \"Blazej\", \"Blazey\", \"Blessing\", \"Blue\", \"Blyth\", \"Bo\", \"Boab\", \"Bob\", \"Bobby\", \"Bobby-Lee\", \"Bodhan\", \"Boedyn\", \"Bogdan\", \"Bohbi\", \"Bony\", \"Bowen\", \"Bowie\", \"Boyd\", \"Bracken\", \"Brad\", \"Bradan\", \"Braden\", \"Bradley\", \"Bradlie\", \"Bradly\", \"Brady\", \"Bradyn\", \"Braeden\", \"Braiden\", \"Brajan\", \"Brandan\", \"Branden\", \"Brandon\", \"Brandonlee\", \"Brandon-Lee\", \"Brandyn\", \"Brannan\", \"Brayden\", \"Braydon\", \"Braydyn\", \"Breandan\", \"Brehme\", \"Brendan\", \"Brendon\", \"Brendyn\", \"Breogan\", \"Bret\", \"Brett\", \"Briaddon\", \"Brian\", \"Brodi\", \"Brodie\", \"Brody\", \"Brogan\", \"Broghan\", \"Brooke\", \"Brooklin\", \"Brooklyn\", \"Bruce\", \"Bruin\", \"Bruno\", \"Brunon\", \"Bryan\", \"Bryce\", \"Bryden\", \"Brydon\", \"Brydon-Craig\", \"Bryn\", \"Brynmor\", \"Bryson\", \"Buddy\", \"Bully\", \"Burak\", \"Burhan\", \"Butali\", \"Butchi\", \"Byron\", \"Cabhan\", \"Cadan\", \"Cade\", \"Caden\", \"Cadon\", \"Cadyn\", \"Caedan\", \"Caedyn\", \"Cael\", \"Caelan\", \"Caelen\", \"Caethan\", \"Cahl\", \"Cahlum\", \"Cai\", \"Caidan\", \"Caiden\", \"Caiden-Paul\", \"Caidyn\", \"Caie\", \"Cailaen\", \"Cailean\", \"Caileb-John\", \"Cailin\", \"Cain\", \"Caine\", \"Cairn\", \"Cal\", \"Calan\", \"Calder\", \"Cale\", \"Calean\", \"Caleb\", \"Calen\", \"Caley\", \"Calib\", \"Calin\", \"Callahan\", \"Callan\", \"Callan-Adam\", \"Calley\", \"Callie\", \"Callin\", \"Callum\", \"Callun\", \"Callyn\", \"Calum\", \"Calum-James\", \"Calvin\", \"Cambell\", \"Camerin\", \"Cameron\", \"Campbel\", \"Campbell\", \"Camron\", \"Caolain\", \"Caolan\", \"Carl\", \"Carlo\", \"Carlos\", \"Carrich\", \"Carrick\", \"Carson\", \"Carter\", \"Carwyn\", \"Casey\", \"Casper\", \"Cassy\", \"Cathal\", \"Cator\", \"Cavan\", \"Cayden\", \"Cayden-Robert\", \"Cayden-Tiamo\", \"Ceejay\", \"Ceilan\", \"Ceiran\", \"Ceirin\", \"Ceiron\", \"Cejay\", \"Celik\", \"Cephas\", \"Cesar\", \"Cesare\", \"Chad\", \"Chaitanya\", \"Chang-Ha\", \"Charles\", \"Charley\", \"Charlie\", \"Charly\", \"Chase\", \"Che\", \"Chester\", \"Chevy\", \"Chi\", \"Chibudom\", \"Chidera\", \"Chimsom\", \"Chin\", \"Chintu\", \"Chiqal\", \"Chiron\", \"Chris\", \"Chris-Daniel\", \"Chrismedi\", \"Christian\", \"Christie\", \"Christoph\", \"Christopher\", \"Christopher-Lee\", \"Christy\", \"Chu\", \"Chukwuemeka\", \"Cian\", \"Ciann\", \"Ciar\", \"Ciaran\", \"Ciarian\", \"Cieran\", \"Cillian\", \"Cillin\", \"Cinar\", \"CJ\", \"C-Jay\", \"Clark\", \"Clarke\", \"Clayton\", \"Clement\", \"Clifford\", \"Clyde\", \"Cobain\", \"Coban\", \"Coben\", \"Cobi\", \"Cobie\", \"Coby\", \"Codey\", \"Codi\", \"Codie\", \"Cody\", \"Cody-Lee\", \"Coel\", \"Cohan\", \"Cohen\", \"Colby\", \"Cole\", \"Colin\", \"Coll\", \"Colm\", \"Colt\", \"Colton\", \"Colum\", \"Colvin\", \"Comghan\", \"Conal\", \"Conall\", \"Conan\", \"Conar\", \"Conghaile\", \"Conlan\", \"Conley\", \"Conli\", \"Conlin\", \"Conlly\", \"Conlon\", \"Conlyn\", \"Connal\", \"Connall\", \"Connan\", \"Connar\", \"Connel\", \"Connell\", \"Conner\", \"Connolly\", \"Connor\", \"Connor-David\", \"Conor\", \"Conrad\", \"Cooper\", \"Copeland\", \"Coray\", \"Corben\", \"Corbin\", \"Corey\", \"Corey-James\", \"Corey-Jay\", \"Cori\", \"Corie\", \"Corin\", \"Cormac\", \"Cormack\", \"Cormak\", \"Corran\", \"Corrie\", \"Cory\", \"Cosmo\", \"Coupar\", \"Craig\", \"Craig-James\", \"Crawford\", \"Creag\", \"Crispin\", \"Cristian\", \"Crombie\", \"Cruiz\", \"Cruz\", \"Cuillin\", \"Cullen\", \"Cullin\", \"Curtis\", \"Cyrus\", \"Daanyaal\", \"Daegan\", \"Daegyu\", \"Dafydd\", \"Dagon\", \"Dailey\", \"Daimhin\", \"Daithi\", \"Dakota\", \"Daksh\", \"Dale\", \"Dalong\", \"Dalton\", \"Damian\", \"Damien\", \"Damon\", \"Dan\", \"Danar\", \"Dane\", \"Danial\", \"Daniel\", \"Daniele\", \"Daniel-James\", \"Daniels\", \"Daniil\", \"Danish\", \"Daniyal\", \"Danniel\", \"Danny\", \"Dante\", \"Danyal\", \"Danyil\", \"Danys\", \"Daood\", \"Dara\", \"Darach\", \"Daragh\", \"Darcy\", \"D'arcy\", \"Dareh\", \"Daren\", \"Darien\", \"Darius\", \"Darl\", \"Darn\", \"Darrach\", \"Darragh\", \"Darrel\", \"Darrell\", \"Darren\", \"Darrie\", \"Darrius\", \"Darroch\", \"Darryl\", \"Darryn\", \"Darwyn\", \"Daryl\", \"Daryn\", \"Daud\", \"Daumantas\", \"Davi\", \"David\", \"David-Jay\"]\r",
+                  "\r",
+                  "// var firstname = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "// var lastName = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "var firstname = names[Math.floor(Math.random() * names.length)];\r",
+                  "var lastName =  names[Math.floor(Math.random() * names.length)];\r",
+                  "\r",
+                  "var d = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "var dob = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "\r",
+                  "var dateNow = moment(new Date()).format('YYYY-MM-DD')\r",
+                  "var phone = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var momo = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var phoneSecondary = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "\r",
+                  "// function randomDate(start, end) {\r",
+                  "//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+                  "// }\r",
+                  "\r",
+                  "// const d = randomDate(new Date(2012, 0, 1), new Date());\r",
+                  "// console.log(d);\r",
+                  "\r",
+                  "var fullName = firstname+' '+lastName\r",
+                  "\r",
+                  "\r",
+                  "pm.variables.set('name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('company_name', JSON.stringify(fullName+' Company'))\r",
+                  "pm.variables.set('dob', JSON.stringify(dob))\r",
+                  "pm.variables.set('mobile_no', \"251394331\"/*JSON.stringify(phone)*/ )\r",
+                  "pm.variables.set('password', JSON.stringify('1234566789'))\r",
+                  "pm.variables.set('email', JSON.stringify(phone+'@insta.com'))\r",
+                  "pm.variables.set('is_active', true)\r",
+                  "pm.variables.set('account_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primei_acc_num', JSON.stringify(phone))\r",
+                  "pm.variables.set('business_address', JSON.stringify(fullName+' Address'))\r",
+                  "pm.variables.set('business_email', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('mobile_money_number', JSON.stringify(momo))\r",
+                  "pm.variables.set('nature_of_business', JSON.stringify(firstname))\r",
+                  "pm.variables.set('number_of_outlets', Math.ceil(Math.random(19999)))\r",
+                  "pm.variables.set('business_reg_no', JSON.stringify(momo))\r",
+                  "pm.variables.set('primary_contact_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primary_contact_mobile', JSON.stringify(phone))\r",
+                  "pm.variables.set('primary_email_address', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('secondary_contact_name', JSON.stringify(firstname+lastName))\r",
+                  "pm.variables.set('secondary_contact_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('secondary_email_address', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('next_of_kin_name', JSON.stringify(firstname+' '+lastName))\r",
+                  "pm.variables.set('next_of_kin_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('next_of_kin_email', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('declaration_agreement', true)\r",
+                  "pm.variables.set('consent_date', JSON.stringify(dateNow))"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 7b07a6e649fff4bff0c58a48c6e2c5a05e56c0b6",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": {{name}},\r\n    \"company_name\": {{company_name}},\r\n    \"dob\": {{dob}},\r\n    \"mobile_no\": \"0234556711\",\r\n    \"password\": {{password}},\r\n    \"email\": {{email}},\r\n    \"is_active\": {{is_active}},\r\n    \"account_name\" : {{account_name}},\r\n    \"primei_acc_num\" : {{primei_acc_num}},\r\n    \"business_address\" : {{business_address}},\r\n    \"business_email\" : {{business_email}},\r\n    \"mobile_money_number\" : {{mobile_money_number}},\r\n    \"nature_of_business\" : {{nature_of_business}},\r\n    \"number_of_outlets\" : {{number_of_outlets}},\r\n    \"business_reg_no\" : {{business_reg_no}},\r\n    \"primary_contact_name\" : {{primary_contact_name}},\r\n    \"primary_contact_mobile\" : {{primary_contact_mobile}},\r\n    \"primary_email_address\" : {{primary_email_address}},\r\n    \"secondary_contact_name\" : {{secondary_contact_name}},\r\n    \"secondary_contact_mobile\" : {{secondary_contact_mobile}},\r\n    \"secondary_email_address\" : {{secondary_email_address}},\r\n    \"next_of_kin_name\" : {{next_of_kin_name}},\r\n    \"next_of_kin_mobile\" : {{next_of_kin_mobile}},\r\n    \"next_of_kin_email\" : {{next_of_kin_email}},\r\n    \"declaration_agreement\" : {{declaration_agreement}},\r\n    \"consent_date\" : {{consent_date}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/agents/create/",
+              "host": ["{{apiUrl}}api"],
+              "path": ["agents", "create", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Approve Agent",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const moment = require(\"moment\")\r",
+                  "var names = [\"Aaran\", \"Aaren\", \"Aarez\", \"Aarman\", \"Aaron\", \"Aaron-James\", \"Aarron\", \"Aaryan\", \"Aaryn\", \"Aayan\", \"Aazaan\", \"Abaan\", \"Abbas\", \"Abdallah\", \"Abdalroof\", \"Abdihakim\", \"Abdirahman\", \"Abdisalam\", \"Abdul\", \"Abdul-Aziz\", \"Abdulbasir\", \"Abdulkadir\", \"Abdulkarem\", \"Abdulkhader\", \"Abdullah\", \"Abdul-Majeed\", \"Abdulmalik\", \"Abdul-Rehman\", \"Abdur\", \"Abdurraheem\", \"Abdur-Rahman\", \"Abdur-Rehmaan\", \"Abel\", \"Abhinav\", \"Abhisumant\", \"Abid\", \"Abir\", \"Abraham\", \"Abu\", \"Abubakar\", \"Ace\", \"Adain\", \"Adam\", \"Adam-James\", \"Addison\", \"Addisson\", \"Adegbola\", \"Adegbolahan\", \"Aden\", \"Adenn\", \"Adie\", \"Adil\", \"Aditya\", \"Adnan\", \"Adrian\", \"Adrien\", \"Aedan\", \"Aedin\", \"Aedyn\", \"Aeron\", \"Afonso\", \"Ahmad\", \"Ahmed\", \"Ahmed-Aziz\", \"Ahoua\", \"Ahtasham\", \"Aiadan\", \"Aidan\", \"Aiden\", \"Aiden-Jack\", \"Aiden-Vee\", \"Aidian\", \"Aidy\", \"Ailin\", \"Aiman\", \"Ainsley\", \"Ainslie\", \"Airen\", \"Airidas\", \"Airlie\", \"AJ\", \"Ajay\", \"A-Jay\", \"Ajayraj\", \"Akan\", \"Akram\", \"Al\", \"Ala\", \"Alan\", \"Alanas\", \"Alasdair\", \"Alastair\", \"Alber\", \"Albert\", \"Albie\", \"Aldred\", \"Alec\", \"Aled\", \"Aleem\", \"Aleksandar\", \"Aleksander\", \"Aleksandr\", \"Aleksandrs\", \"Alekzander\", \"Alessandro\", \"Alessio\", \"Alex\", \"Alexander\", \"Alexei\", \"Alexx\", \"Alexzander\", \"Alf\", \"Alfee\", \"Alfie\", \"Alfred\", \"Alfy\", \"Alhaji\", \"Al-Hassan\", \"Ali\", \"Aliekber\", \"Alieu\", \"Alihaider\", \"Alisdair\", \"Alishan\", \"Alistair\", \"Alistar\", \"Alister\", \"Aliyaan\", \"Allan\", \"Allan-Laiton\", \"Allen\", \"Allesandro\", \"Allister\", \"Ally\", \"Alphonse\", \"Altyiab\", \"Alum\", \"Alvern\", \"Alvin\", \"Alyas\", \"Amaan\", \"Aman\", \"Amani\", \"Ambanimoh\", \"Ameer\", \"Amgad\", \"Ami\", \"Amin\", \"Amir\", \"Ammaar\", \"Ammar\", \"Ammer\", \"Amolpreet\", \"Amos\", \"Amrinder\", \"Amrit\", \"Amro\", \"Anay\", \"Andrea\", \"Andreas\", \"Andrei\", \"Andrejs\", \"Andrew\", \"Andy\", \"Anees\", \"Anesu\", \"Angel\", \"Angelo\", \"Angus\", \"Anir\", \"Anis\", \"Anish\", \"Anmolpreet\", \"Annan\", \"Anndra\", \"Anselm\", \"Anthony\", \"Anthony-John\", \"Antoine\", \"Anton\", \"Antoni\", \"Antonio\", \"Antony\", \"Antonyo\", \"Anubhav\", \"Aodhan\", \"Aon\", \"Aonghus\", \"Apisai\", \"Arafat\", \"Aran\", \"Arandeep\", \"Arann\", \"Aray\", \"Arayan\", \"Archibald\", \"Archie\", \"Arda\", \"Ardal\", \"Ardeshir\", \"Areeb\", \"Areez\", \"Aref\", \"Arfin\", \"Argyle\", \"Argyll\", \"Ari\", \"Aria\", \"Arian\", \"Arihant\", \"Aristomenis\", \"Aristotelis\", \"Arjuna\", \"Arlo\", \"Armaan\", \"Arman\", \"Armen\", \"Arnab\", \"Arnav\", \"Arnold\", \"Aron\", \"Aronas\", \"Arran\", \"Arrham\", \"Arron\", \"Arryn\", \"Arsalan\", \"Artem\", \"Arthur\", \"Artur\", \"Arturo\", \"Arun\", \"Arunas\", \"Arved\", \"Arya\", \"Aryan\", \"Aryankhan\", \"Aryian\", \"Aryn\", \"Asa\", \"Asfhan\", \"Ash\", \"Ashlee-jay\", \"Ashley\", \"Ashton\", \"Ashton-Lloyd\", \"Ashtyn\", \"Ashwin\", \"Asif\", \"Asim\", \"Aslam\", \"Asrar\", \"Ata\", \"Atal\", \"Atapattu\", \"Ateeq\", \"Athol\", \"Athon\", \"Athos-Carlos\", \"Atli\", \"Atom\", \"Attila\", \"Aulay\", \"Aun\", \"Austen\", \"Austin\", \"Avani\", \"Averon\", \"Avi\", \"Avinash\", \"Avraham\", \"Awais\", \"Awwal\", \"Axel\", \"Ayaan\", \"Ayan\", \"Aydan\", \"Ayden\", \"Aydin\", \"Aydon\", \"Ayman\", \"Ayomide\", \"Ayren\", \"Ayrton\", \"Aytug\", \"Ayub\", \"Ayyub\", \"Azaan\", \"Azedine\", \"Azeem\", \"Azim\", \"Aziz\", \"Azlan\", \"Azzam\", \"Azzedine\", \"Babatunmise\", \"Babur\", \"Bader\", \"Badr\", \"Badsha\", \"Bailee\", \"Bailey\", \"Bailie\", \"Bailley\", \"Baillie\", \"Baley\", \"Balian\", \"Banan\", \"Barath\", \"Barkley\", \"Barney\", \"Baron\", \"Barrie\", \"Barry\", \"Bartlomiej\", \"Bartosz\", \"Basher\", \"Basile\", \"Baxter\", \"Baye\", \"Bayley\", \"Beau\", \"Beinn\", \"Bekim\", \"Believe\", \"Ben\", \"Bendeguz\", \"Benedict\", \"Benjamin\", \"Benjamyn\", \"Benji\", \"Benn\", \"Bennett\", \"Benny\", \"Benoit\", \"Bentley\", \"Berkay\", \"Bernard\", \"Bertie\", \"Bevin\", \"Bezalel\", \"Bhaaldeen\", \"Bharath\", \"Bilal\", \"Bill\", \"Billy\", \"Binod\", \"Bjorn\", \"Blaike\", \"Blaine\", \"Blair\", \"Blaire\", \"Blake\", \"Blazej\", \"Blazey\", \"Blessing\", \"Blue\", \"Blyth\", \"Bo\", \"Boab\", \"Bob\", \"Bobby\", \"Bobby-Lee\", \"Bodhan\", \"Boedyn\", \"Bogdan\", \"Bohbi\", \"Bony\", \"Bowen\", \"Bowie\", \"Boyd\", \"Bracken\", \"Brad\", \"Bradan\", \"Braden\", \"Bradley\", \"Bradlie\", \"Bradly\", \"Brady\", \"Bradyn\", \"Braeden\", \"Braiden\", \"Brajan\", \"Brandan\", \"Branden\", \"Brandon\", \"Brandonlee\", \"Brandon-Lee\", \"Brandyn\", \"Brannan\", \"Brayden\", \"Braydon\", \"Braydyn\", \"Breandan\", \"Brehme\", \"Brendan\", \"Brendon\", \"Brendyn\", \"Breogan\", \"Bret\", \"Brett\", \"Briaddon\", \"Brian\", \"Brodi\", \"Brodie\", \"Brody\", \"Brogan\", \"Broghan\", \"Brooke\", \"Brooklin\", \"Brooklyn\", \"Bruce\", \"Bruin\", \"Bruno\", \"Brunon\", \"Bryan\", \"Bryce\", \"Bryden\", \"Brydon\", \"Brydon-Craig\", \"Bryn\", \"Brynmor\", \"Bryson\", \"Buddy\", \"Bully\", \"Burak\", \"Burhan\", \"Butali\", \"Butchi\", \"Byron\", \"Cabhan\", \"Cadan\", \"Cade\", \"Caden\", \"Cadon\", \"Cadyn\", \"Caedan\", \"Caedyn\", \"Cael\", \"Caelan\", \"Caelen\", \"Caethan\", \"Cahl\", \"Cahlum\", \"Cai\", \"Caidan\", \"Caiden\", \"Caiden-Paul\", \"Caidyn\", \"Caie\", \"Cailaen\", \"Cailean\", \"Caileb-John\", \"Cailin\", \"Cain\", \"Caine\", \"Cairn\", \"Cal\", \"Calan\", \"Calder\", \"Cale\", \"Calean\", \"Caleb\", \"Calen\", \"Caley\", \"Calib\", \"Calin\", \"Callahan\", \"Callan\", \"Callan-Adam\", \"Calley\", \"Callie\", \"Callin\", \"Callum\", \"Callun\", \"Callyn\", \"Calum\", \"Calum-James\", \"Calvin\", \"Cambell\", \"Camerin\", \"Cameron\", \"Campbel\", \"Campbell\", \"Camron\", \"Caolain\", \"Caolan\", \"Carl\", \"Carlo\", \"Carlos\", \"Carrich\", \"Carrick\", \"Carson\", \"Carter\", \"Carwyn\", \"Casey\", \"Casper\", \"Cassy\", \"Cathal\", \"Cator\", \"Cavan\", \"Cayden\", \"Cayden-Robert\", \"Cayden-Tiamo\", \"Ceejay\", \"Ceilan\", \"Ceiran\", \"Ceirin\", \"Ceiron\", \"Cejay\", \"Celik\", \"Cephas\", \"Cesar\", \"Cesare\", \"Chad\", \"Chaitanya\", \"Chang-Ha\", \"Charles\", \"Charley\", \"Charlie\", \"Charly\", \"Chase\", \"Che\", \"Chester\", \"Chevy\", \"Chi\", \"Chibudom\", \"Chidera\", \"Chimsom\", \"Chin\", \"Chintu\", \"Chiqal\", \"Chiron\", \"Chris\", \"Chris-Daniel\", \"Chrismedi\", \"Christian\", \"Christie\", \"Christoph\", \"Christopher\", \"Christopher-Lee\", \"Christy\", \"Chu\", \"Chukwuemeka\", \"Cian\", \"Ciann\", \"Ciar\", \"Ciaran\", \"Ciarian\", \"Cieran\", \"Cillian\", \"Cillin\", \"Cinar\", \"CJ\", \"C-Jay\", \"Clark\", \"Clarke\", \"Clayton\", \"Clement\", \"Clifford\", \"Clyde\", \"Cobain\", \"Coban\", \"Coben\", \"Cobi\", \"Cobie\", \"Coby\", \"Codey\", \"Codi\", \"Codie\", \"Cody\", \"Cody-Lee\", \"Coel\", \"Cohan\", \"Cohen\", \"Colby\", \"Cole\", \"Colin\", \"Coll\", \"Colm\", \"Colt\", \"Colton\", \"Colum\", \"Colvin\", \"Comghan\", \"Conal\", \"Conall\", \"Conan\", \"Conar\", \"Conghaile\", \"Conlan\", \"Conley\", \"Conli\", \"Conlin\", \"Conlly\", \"Conlon\", \"Conlyn\", \"Connal\", \"Connall\", \"Connan\", \"Connar\", \"Connel\", \"Connell\", \"Conner\", \"Connolly\", \"Connor\", \"Connor-David\", \"Conor\", \"Conrad\", \"Cooper\", \"Copeland\", \"Coray\", \"Corben\", \"Corbin\", \"Corey\", \"Corey-James\", \"Corey-Jay\", \"Cori\", \"Corie\", \"Corin\", \"Cormac\", \"Cormack\", \"Cormak\", \"Corran\", \"Corrie\", \"Cory\", \"Cosmo\", \"Coupar\", \"Craig\", \"Craig-James\", \"Crawford\", \"Creag\", \"Crispin\", \"Cristian\", \"Crombie\", \"Cruiz\", \"Cruz\", \"Cuillin\", \"Cullen\", \"Cullin\", \"Curtis\", \"Cyrus\", \"Daanyaal\", \"Daegan\", \"Daegyu\", \"Dafydd\", \"Dagon\", \"Dailey\", \"Daimhin\", \"Daithi\", \"Dakota\", \"Daksh\", \"Dale\", \"Dalong\", \"Dalton\", \"Damian\", \"Damien\", \"Damon\", \"Dan\", \"Danar\", \"Dane\", \"Danial\", \"Daniel\", \"Daniele\", \"Daniel-James\", \"Daniels\", \"Daniil\", \"Danish\", \"Daniyal\", \"Danniel\", \"Danny\", \"Dante\", \"Danyal\", \"Danyil\", \"Danys\", \"Daood\", \"Dara\", \"Darach\", \"Daragh\", \"Darcy\", \"D'arcy\", \"Dareh\", \"Daren\", \"Darien\", \"Darius\", \"Darl\", \"Darn\", \"Darrach\", \"Darragh\", \"Darrel\", \"Darrell\", \"Darren\", \"Darrie\", \"Darrius\", \"Darroch\", \"Darryl\", \"Darryn\", \"Darwyn\", \"Daryl\", \"Daryn\", \"Daud\", \"Daumantas\", \"Davi\", \"David\", \"David-Jay\"]\r",
+                  "\r",
+                  "// var firstname = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "// var lastName = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "var firstname = names[Math.floor(Math.random() * names.length)];\r",
+                  "var lastName =  names[Math.floor(Math.random() * names.length)];\r",
+                  "\r",
+                  "var d = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "var dob = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "\r",
+                  "var dateNow = moment(new Date()).format('YYYY-MM-DD')\r",
+                  "var phone = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var momo = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var phoneSecondary = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "\r",
+                  "// function randomDate(start, end) {\r",
+                  "//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+                  "// }\r",
+                  "\r",
+                  "// const d = randomDate(new Date(2012, 0, 1), new Date());\r",
+                  "// console.log(d);\r",
+                  "\r",
+                  "var fullName = firstname+' '+lastName\r",
+                  "\r",
+                  "\r",
+                  "pm.variables.set('name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('company_name', JSON.stringify(fullName+' Company'))\r",
+                  "pm.variables.set('dob', JSON.stringify(dob))\r",
+                  "pm.variables.set('mobile_no', \"251394331\"/*JSON.stringify(phone)*/ )\r",
+                  "pm.variables.set('password', JSON.stringify('1234566789'))\r",
+                  "pm.variables.set('email', JSON.stringify(phone+'@insta.com'))\r",
+                  "pm.variables.set('is_active', true)\r",
+                  "pm.variables.set('account_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primei_acc_num', JSON.stringify(phone))\r",
+                  "pm.variables.set('business_address', JSON.stringify(fullName+' Address'))\r",
+                  "pm.variables.set('business_email', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('mobile_money_number', JSON.stringify(momo))\r",
+                  "pm.variables.set('nature_of_business', JSON.stringify(firstname))\r",
+                  "pm.variables.set('number_of_outlets', Math.ceil(Math.random(19999)))\r",
+                  "pm.variables.set('business_reg_no', JSON.stringify(momo))\r",
+                  "pm.variables.set('primary_contact_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primary_contact_mobile', JSON.stringify(phone))\r",
+                  "pm.variables.set('primary_email_address', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('secondary_contact_name', JSON.stringify(firstname+lastName))\r",
+                  "pm.variables.set('secondary_contact_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('secondary_email_address', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('next_of_kin_name', JSON.stringify(firstname+' '+lastName))\r",
+                  "pm.variables.set('next_of_kin_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('next_of_kin_email', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('declaration_agreement', true)\r",
+                  "pm.variables.set('consent_date', JSON.stringify(dateNow))"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 7b07a6e649fff4bff0c58a48c6e2c5a05e56c0b6",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/agents/:id/approve",
+              "host": ["{{apiUrl}}api"],
+              "path": ["agents", ":id", "approve"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "View Agent",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const moment = require(\"moment\")\r",
+                  "var names = [\"Aaran\", \"Aaren\", \"Aarez\", \"Aarman\", \"Aaron\", \"Aaron-James\", \"Aarron\", \"Aaryan\", \"Aaryn\", \"Aayan\", \"Aazaan\", \"Abaan\", \"Abbas\", \"Abdallah\", \"Abdalroof\", \"Abdihakim\", \"Abdirahman\", \"Abdisalam\", \"Abdul\", \"Abdul-Aziz\", \"Abdulbasir\", \"Abdulkadir\", \"Abdulkarem\", \"Abdulkhader\", \"Abdullah\", \"Abdul-Majeed\", \"Abdulmalik\", \"Abdul-Rehman\", \"Abdur\", \"Abdurraheem\", \"Abdur-Rahman\", \"Abdur-Rehmaan\", \"Abel\", \"Abhinav\", \"Abhisumant\", \"Abid\", \"Abir\", \"Abraham\", \"Abu\", \"Abubakar\", \"Ace\", \"Adain\", \"Adam\", \"Adam-James\", \"Addison\", \"Addisson\", \"Adegbola\", \"Adegbolahan\", \"Aden\", \"Adenn\", \"Adie\", \"Adil\", \"Aditya\", \"Adnan\", \"Adrian\", \"Adrien\", \"Aedan\", \"Aedin\", \"Aedyn\", \"Aeron\", \"Afonso\", \"Ahmad\", \"Ahmed\", \"Ahmed-Aziz\", \"Ahoua\", \"Ahtasham\", \"Aiadan\", \"Aidan\", \"Aiden\", \"Aiden-Jack\", \"Aiden-Vee\", \"Aidian\", \"Aidy\", \"Ailin\", \"Aiman\", \"Ainsley\", \"Ainslie\", \"Airen\", \"Airidas\", \"Airlie\", \"AJ\", \"Ajay\", \"A-Jay\", \"Ajayraj\", \"Akan\", \"Akram\", \"Al\", \"Ala\", \"Alan\", \"Alanas\", \"Alasdair\", \"Alastair\", \"Alber\", \"Albert\", \"Albie\", \"Aldred\", \"Alec\", \"Aled\", \"Aleem\", \"Aleksandar\", \"Aleksander\", \"Aleksandr\", \"Aleksandrs\", \"Alekzander\", \"Alessandro\", \"Alessio\", \"Alex\", \"Alexander\", \"Alexei\", \"Alexx\", \"Alexzander\", \"Alf\", \"Alfee\", \"Alfie\", \"Alfred\", \"Alfy\", \"Alhaji\", \"Al-Hassan\", \"Ali\", \"Aliekber\", \"Alieu\", \"Alihaider\", \"Alisdair\", \"Alishan\", \"Alistair\", \"Alistar\", \"Alister\", \"Aliyaan\", \"Allan\", \"Allan-Laiton\", \"Allen\", \"Allesandro\", \"Allister\", \"Ally\", \"Alphonse\", \"Altyiab\", \"Alum\", \"Alvern\", \"Alvin\", \"Alyas\", \"Amaan\", \"Aman\", \"Amani\", \"Ambanimoh\", \"Ameer\", \"Amgad\", \"Ami\", \"Amin\", \"Amir\", \"Ammaar\", \"Ammar\", \"Ammer\", \"Amolpreet\", \"Amos\", \"Amrinder\", \"Amrit\", \"Amro\", \"Anay\", \"Andrea\", \"Andreas\", \"Andrei\", \"Andrejs\", \"Andrew\", \"Andy\", \"Anees\", \"Anesu\", \"Angel\", \"Angelo\", \"Angus\", \"Anir\", \"Anis\", \"Anish\", \"Anmolpreet\", \"Annan\", \"Anndra\", \"Anselm\", \"Anthony\", \"Anthony-John\", \"Antoine\", \"Anton\", \"Antoni\", \"Antonio\", \"Antony\", \"Antonyo\", \"Anubhav\", \"Aodhan\", \"Aon\", \"Aonghus\", \"Apisai\", \"Arafat\", \"Aran\", \"Arandeep\", \"Arann\", \"Aray\", \"Arayan\", \"Archibald\", \"Archie\", \"Arda\", \"Ardal\", \"Ardeshir\", \"Areeb\", \"Areez\", \"Aref\", \"Arfin\", \"Argyle\", \"Argyll\", \"Ari\", \"Aria\", \"Arian\", \"Arihant\", \"Aristomenis\", \"Aristotelis\", \"Arjuna\", \"Arlo\", \"Armaan\", \"Arman\", \"Armen\", \"Arnab\", \"Arnav\", \"Arnold\", \"Aron\", \"Aronas\", \"Arran\", \"Arrham\", \"Arron\", \"Arryn\", \"Arsalan\", \"Artem\", \"Arthur\", \"Artur\", \"Arturo\", \"Arun\", \"Arunas\", \"Arved\", \"Arya\", \"Aryan\", \"Aryankhan\", \"Aryian\", \"Aryn\", \"Asa\", \"Asfhan\", \"Ash\", \"Ashlee-jay\", \"Ashley\", \"Ashton\", \"Ashton-Lloyd\", \"Ashtyn\", \"Ashwin\", \"Asif\", \"Asim\", \"Aslam\", \"Asrar\", \"Ata\", \"Atal\", \"Atapattu\", \"Ateeq\", \"Athol\", \"Athon\", \"Athos-Carlos\", \"Atli\", \"Atom\", \"Attila\", \"Aulay\", \"Aun\", \"Austen\", \"Austin\", \"Avani\", \"Averon\", \"Avi\", \"Avinash\", \"Avraham\", \"Awais\", \"Awwal\", \"Axel\", \"Ayaan\", \"Ayan\", \"Aydan\", \"Ayden\", \"Aydin\", \"Aydon\", \"Ayman\", \"Ayomide\", \"Ayren\", \"Ayrton\", \"Aytug\", \"Ayub\", \"Ayyub\", \"Azaan\", \"Azedine\", \"Azeem\", \"Azim\", \"Aziz\", \"Azlan\", \"Azzam\", \"Azzedine\", \"Babatunmise\", \"Babur\", \"Bader\", \"Badr\", \"Badsha\", \"Bailee\", \"Bailey\", \"Bailie\", \"Bailley\", \"Baillie\", \"Baley\", \"Balian\", \"Banan\", \"Barath\", \"Barkley\", \"Barney\", \"Baron\", \"Barrie\", \"Barry\", \"Bartlomiej\", \"Bartosz\", \"Basher\", \"Basile\", \"Baxter\", \"Baye\", \"Bayley\", \"Beau\", \"Beinn\", \"Bekim\", \"Believe\", \"Ben\", \"Bendeguz\", \"Benedict\", \"Benjamin\", \"Benjamyn\", \"Benji\", \"Benn\", \"Bennett\", \"Benny\", \"Benoit\", \"Bentley\", \"Berkay\", \"Bernard\", \"Bertie\", \"Bevin\", \"Bezalel\", \"Bhaaldeen\", \"Bharath\", \"Bilal\", \"Bill\", \"Billy\", \"Binod\", \"Bjorn\", \"Blaike\", \"Blaine\", \"Blair\", \"Blaire\", \"Blake\", \"Blazej\", \"Blazey\", \"Blessing\", \"Blue\", \"Blyth\", \"Bo\", \"Boab\", \"Bob\", \"Bobby\", \"Bobby-Lee\", \"Bodhan\", \"Boedyn\", \"Bogdan\", \"Bohbi\", \"Bony\", \"Bowen\", \"Bowie\", \"Boyd\", \"Bracken\", \"Brad\", \"Bradan\", \"Braden\", \"Bradley\", \"Bradlie\", \"Bradly\", \"Brady\", \"Bradyn\", \"Braeden\", \"Braiden\", \"Brajan\", \"Brandan\", \"Branden\", \"Brandon\", \"Brandonlee\", \"Brandon-Lee\", \"Brandyn\", \"Brannan\", \"Brayden\", \"Braydon\", \"Braydyn\", \"Breandan\", \"Brehme\", \"Brendan\", \"Brendon\", \"Brendyn\", \"Breogan\", \"Bret\", \"Brett\", \"Briaddon\", \"Brian\", \"Brodi\", \"Brodie\", \"Brody\", \"Brogan\", \"Broghan\", \"Brooke\", \"Brooklin\", \"Brooklyn\", \"Bruce\", \"Bruin\", \"Bruno\", \"Brunon\", \"Bryan\", \"Bryce\", \"Bryden\", \"Brydon\", \"Brydon-Craig\", \"Bryn\", \"Brynmor\", \"Bryson\", \"Buddy\", \"Bully\", \"Burak\", \"Burhan\", \"Butali\", \"Butchi\", \"Byron\", \"Cabhan\", \"Cadan\", \"Cade\", \"Caden\", \"Cadon\", \"Cadyn\", \"Caedan\", \"Caedyn\", \"Cael\", \"Caelan\", \"Caelen\", \"Caethan\", \"Cahl\", \"Cahlum\", \"Cai\", \"Caidan\", \"Caiden\", \"Caiden-Paul\", \"Caidyn\", \"Caie\", \"Cailaen\", \"Cailean\", \"Caileb-John\", \"Cailin\", \"Cain\", \"Caine\", \"Cairn\", \"Cal\", \"Calan\", \"Calder\", \"Cale\", \"Calean\", \"Caleb\", \"Calen\", \"Caley\", \"Calib\", \"Calin\", \"Callahan\", \"Callan\", \"Callan-Adam\", \"Calley\", \"Callie\", \"Callin\", \"Callum\", \"Callun\", \"Callyn\", \"Calum\", \"Calum-James\", \"Calvin\", \"Cambell\", \"Camerin\", \"Cameron\", \"Campbel\", \"Campbell\", \"Camron\", \"Caolain\", \"Caolan\", \"Carl\", \"Carlo\", \"Carlos\", \"Carrich\", \"Carrick\", \"Carson\", \"Carter\", \"Carwyn\", \"Casey\", \"Casper\", \"Cassy\", \"Cathal\", \"Cator\", \"Cavan\", \"Cayden\", \"Cayden-Robert\", \"Cayden-Tiamo\", \"Ceejay\", \"Ceilan\", \"Ceiran\", \"Ceirin\", \"Ceiron\", \"Cejay\", \"Celik\", \"Cephas\", \"Cesar\", \"Cesare\", \"Chad\", \"Chaitanya\", \"Chang-Ha\", \"Charles\", \"Charley\", \"Charlie\", \"Charly\", \"Chase\", \"Che\", \"Chester\", \"Chevy\", \"Chi\", \"Chibudom\", \"Chidera\", \"Chimsom\", \"Chin\", \"Chintu\", \"Chiqal\", \"Chiron\", \"Chris\", \"Chris-Daniel\", \"Chrismedi\", \"Christian\", \"Christie\", \"Christoph\", \"Christopher\", \"Christopher-Lee\", \"Christy\", \"Chu\", \"Chukwuemeka\", \"Cian\", \"Ciann\", \"Ciar\", \"Ciaran\", \"Ciarian\", \"Cieran\", \"Cillian\", \"Cillin\", \"Cinar\", \"CJ\", \"C-Jay\", \"Clark\", \"Clarke\", \"Clayton\", \"Clement\", \"Clifford\", \"Clyde\", \"Cobain\", \"Coban\", \"Coben\", \"Cobi\", \"Cobie\", \"Coby\", \"Codey\", \"Codi\", \"Codie\", \"Cody\", \"Cody-Lee\", \"Coel\", \"Cohan\", \"Cohen\", \"Colby\", \"Cole\", \"Colin\", \"Coll\", \"Colm\", \"Colt\", \"Colton\", \"Colum\", \"Colvin\", \"Comghan\", \"Conal\", \"Conall\", \"Conan\", \"Conar\", \"Conghaile\", \"Conlan\", \"Conley\", \"Conli\", \"Conlin\", \"Conlly\", \"Conlon\", \"Conlyn\", \"Connal\", \"Connall\", \"Connan\", \"Connar\", \"Connel\", \"Connell\", \"Conner\", \"Connolly\", \"Connor\", \"Connor-David\", \"Conor\", \"Conrad\", \"Cooper\", \"Copeland\", \"Coray\", \"Corben\", \"Corbin\", \"Corey\", \"Corey-James\", \"Corey-Jay\", \"Cori\", \"Corie\", \"Corin\", \"Cormac\", \"Cormack\", \"Cormak\", \"Corran\", \"Corrie\", \"Cory\", \"Cosmo\", \"Coupar\", \"Craig\", \"Craig-James\", \"Crawford\", \"Creag\", \"Crispin\", \"Cristian\", \"Crombie\", \"Cruiz\", \"Cruz\", \"Cuillin\", \"Cullen\", \"Cullin\", \"Curtis\", \"Cyrus\", \"Daanyaal\", \"Daegan\", \"Daegyu\", \"Dafydd\", \"Dagon\", \"Dailey\", \"Daimhin\", \"Daithi\", \"Dakota\", \"Daksh\", \"Dale\", \"Dalong\", \"Dalton\", \"Damian\", \"Damien\", \"Damon\", \"Dan\", \"Danar\", \"Dane\", \"Danial\", \"Daniel\", \"Daniele\", \"Daniel-James\", \"Daniels\", \"Daniil\", \"Danish\", \"Daniyal\", \"Danniel\", \"Danny\", \"Dante\", \"Danyal\", \"Danyil\", \"Danys\", \"Daood\", \"Dara\", \"Darach\", \"Daragh\", \"Darcy\", \"D'arcy\", \"Dareh\", \"Daren\", \"Darien\", \"Darius\", \"Darl\", \"Darn\", \"Darrach\", \"Darragh\", \"Darrel\", \"Darrell\", \"Darren\", \"Darrie\", \"Darrius\", \"Darroch\", \"Darryl\", \"Darryn\", \"Darwyn\", \"Daryl\", \"Daryn\", \"Daud\", \"Daumantas\", \"Davi\", \"David\", \"David-Jay\"]\r",
+                  "\r",
+                  "// var firstname = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "// var lastName = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "var firstname = names[Math.floor(Math.random() * names.length)];\r",
+                  "var lastName =  names[Math.floor(Math.random() * names.length)];\r",
+                  "\r",
+                  "var d = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "var dob = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "\r",
+                  "var dateNow = moment(new Date()).format('YYYY-MM-DD')\r",
+                  "var phone = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var momo = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var phoneSecondary = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "\r",
+                  "// function randomDate(start, end) {\r",
+                  "//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+                  "// }\r",
+                  "\r",
+                  "// const d = randomDate(new Date(2012, 0, 1), new Date());\r",
+                  "// console.log(d);\r",
+                  "\r",
+                  "var fullName = firstname+' '+lastName\r",
+                  "\r",
+                  "\r",
+                  "pm.variables.set('name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('company_name', JSON.stringify(fullName+' Company'))\r",
+                  "pm.variables.set('dob', JSON.stringify(dob))\r",
+                  "pm.variables.set('mobile_no', \"251394331\"/*JSON.stringify(phone)*/ )\r",
+                  "pm.variables.set('password', JSON.stringify('1234566789'))\r",
+                  "pm.variables.set('email', JSON.stringify(phone+'@insta.com'))\r",
+                  "pm.variables.set('is_active', true)\r",
+                  "pm.variables.set('account_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primei_acc_num', JSON.stringify(phone))\r",
+                  "pm.variables.set('business_address', JSON.stringify(fullName+' Address'))\r",
+                  "pm.variables.set('business_email', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('mobile_money_number', JSON.stringify(momo))\r",
+                  "pm.variables.set('nature_of_business', JSON.stringify(firstname))\r",
+                  "pm.variables.set('number_of_outlets', Math.ceil(Math.random(19999)))\r",
+                  "pm.variables.set('business_reg_no', JSON.stringify(momo))\r",
+                  "pm.variables.set('primary_contact_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primary_contact_mobile', JSON.stringify(phone))\r",
+                  "pm.variables.set('primary_email_address', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('secondary_contact_name', JSON.stringify(firstname+lastName))\r",
+                  "pm.variables.set('secondary_contact_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('secondary_email_address', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('next_of_kin_name', JSON.stringify(firstname+' '+lastName))\r",
+                  "pm.variables.set('next_of_kin_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('next_of_kin_email', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('declaration_agreement', true)\r",
+                  "pm.variables.set('consent_date', JSON.stringify(dateNow))"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/agents/:id",
+              "host": ["{{apiUrl}}api"],
+              "path": ["agents", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Agent Status",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const moment = require(\"moment\")\r",
+                  "var names = [\"Aaran\", \"Aaren\", \"Aarez\", \"Aarman\", \"Aaron\", \"Aaron-James\", \"Aarron\", \"Aaryan\", \"Aaryn\", \"Aayan\", \"Aazaan\", \"Abaan\", \"Abbas\", \"Abdallah\", \"Abdalroof\", \"Abdihakim\", \"Abdirahman\", \"Abdisalam\", \"Abdul\", \"Abdul-Aziz\", \"Abdulbasir\", \"Abdulkadir\", \"Abdulkarem\", \"Abdulkhader\", \"Abdullah\", \"Abdul-Majeed\", \"Abdulmalik\", \"Abdul-Rehman\", \"Abdur\", \"Abdurraheem\", \"Abdur-Rahman\", \"Abdur-Rehmaan\", \"Abel\", \"Abhinav\", \"Abhisumant\", \"Abid\", \"Abir\", \"Abraham\", \"Abu\", \"Abubakar\", \"Ace\", \"Adain\", \"Adam\", \"Adam-James\", \"Addison\", \"Addisson\", \"Adegbola\", \"Adegbolahan\", \"Aden\", \"Adenn\", \"Adie\", \"Adil\", \"Aditya\", \"Adnan\", \"Adrian\", \"Adrien\", \"Aedan\", \"Aedin\", \"Aedyn\", \"Aeron\", \"Afonso\", \"Ahmad\", \"Ahmed\", \"Ahmed-Aziz\", \"Ahoua\", \"Ahtasham\", \"Aiadan\", \"Aidan\", \"Aiden\", \"Aiden-Jack\", \"Aiden-Vee\", \"Aidian\", \"Aidy\", \"Ailin\", \"Aiman\", \"Ainsley\", \"Ainslie\", \"Airen\", \"Airidas\", \"Airlie\", \"AJ\", \"Ajay\", \"A-Jay\", \"Ajayraj\", \"Akan\", \"Akram\", \"Al\", \"Ala\", \"Alan\", \"Alanas\", \"Alasdair\", \"Alastair\", \"Alber\", \"Albert\", \"Albie\", \"Aldred\", \"Alec\", \"Aled\", \"Aleem\", \"Aleksandar\", \"Aleksander\", \"Aleksandr\", \"Aleksandrs\", \"Alekzander\", \"Alessandro\", \"Alessio\", \"Alex\", \"Alexander\", \"Alexei\", \"Alexx\", \"Alexzander\", \"Alf\", \"Alfee\", \"Alfie\", \"Alfred\", \"Alfy\", \"Alhaji\", \"Al-Hassan\", \"Ali\", \"Aliekber\", \"Alieu\", \"Alihaider\", \"Alisdair\", \"Alishan\", \"Alistair\", \"Alistar\", \"Alister\", \"Aliyaan\", \"Allan\", \"Allan-Laiton\", \"Allen\", \"Allesandro\", \"Allister\", \"Ally\", \"Alphonse\", \"Altyiab\", \"Alum\", \"Alvern\", \"Alvin\", \"Alyas\", \"Amaan\", \"Aman\", \"Amani\", \"Ambanimoh\", \"Ameer\", \"Amgad\", \"Ami\", \"Amin\", \"Amir\", \"Ammaar\", \"Ammar\", \"Ammer\", \"Amolpreet\", \"Amos\", \"Amrinder\", \"Amrit\", \"Amro\", \"Anay\", \"Andrea\", \"Andreas\", \"Andrei\", \"Andrejs\", \"Andrew\", \"Andy\", \"Anees\", \"Anesu\", \"Angel\", \"Angelo\", \"Angus\", \"Anir\", \"Anis\", \"Anish\", \"Anmolpreet\", \"Annan\", \"Anndra\", \"Anselm\", \"Anthony\", \"Anthony-John\", \"Antoine\", \"Anton\", \"Antoni\", \"Antonio\", \"Antony\", \"Antonyo\", \"Anubhav\", \"Aodhan\", \"Aon\", \"Aonghus\", \"Apisai\", \"Arafat\", \"Aran\", \"Arandeep\", \"Arann\", \"Aray\", \"Arayan\", \"Archibald\", \"Archie\", \"Arda\", \"Ardal\", \"Ardeshir\", \"Areeb\", \"Areez\", \"Aref\", \"Arfin\", \"Argyle\", \"Argyll\", \"Ari\", \"Aria\", \"Arian\", \"Arihant\", \"Aristomenis\", \"Aristotelis\", \"Arjuna\", \"Arlo\", \"Armaan\", \"Arman\", \"Armen\", \"Arnab\", \"Arnav\", \"Arnold\", \"Aron\", \"Aronas\", \"Arran\", \"Arrham\", \"Arron\", \"Arryn\", \"Arsalan\", \"Artem\", \"Arthur\", \"Artur\", \"Arturo\", \"Arun\", \"Arunas\", \"Arved\", \"Arya\", \"Aryan\", \"Aryankhan\", \"Aryian\", \"Aryn\", \"Asa\", \"Asfhan\", \"Ash\", \"Ashlee-jay\", \"Ashley\", \"Ashton\", \"Ashton-Lloyd\", \"Ashtyn\", \"Ashwin\", \"Asif\", \"Asim\", \"Aslam\", \"Asrar\", \"Ata\", \"Atal\", \"Atapattu\", \"Ateeq\", \"Athol\", \"Athon\", \"Athos-Carlos\", \"Atli\", \"Atom\", \"Attila\", \"Aulay\", \"Aun\", \"Austen\", \"Austin\", \"Avani\", \"Averon\", \"Avi\", \"Avinash\", \"Avraham\", \"Awais\", \"Awwal\", \"Axel\", \"Ayaan\", \"Ayan\", \"Aydan\", \"Ayden\", \"Aydin\", \"Aydon\", \"Ayman\", \"Ayomide\", \"Ayren\", \"Ayrton\", \"Aytug\", \"Ayub\", \"Ayyub\", \"Azaan\", \"Azedine\", \"Azeem\", \"Azim\", \"Aziz\", \"Azlan\", \"Azzam\", \"Azzedine\", \"Babatunmise\", \"Babur\", \"Bader\", \"Badr\", \"Badsha\", \"Bailee\", \"Bailey\", \"Bailie\", \"Bailley\", \"Baillie\", \"Baley\", \"Balian\", \"Banan\", \"Barath\", \"Barkley\", \"Barney\", \"Baron\", \"Barrie\", \"Barry\", \"Bartlomiej\", \"Bartosz\", \"Basher\", \"Basile\", \"Baxter\", \"Baye\", \"Bayley\", \"Beau\", \"Beinn\", \"Bekim\", \"Believe\", \"Ben\", \"Bendeguz\", \"Benedict\", \"Benjamin\", \"Benjamyn\", \"Benji\", \"Benn\", \"Bennett\", \"Benny\", \"Benoit\", \"Bentley\", \"Berkay\", \"Bernard\", \"Bertie\", \"Bevin\", \"Bezalel\", \"Bhaaldeen\", \"Bharath\", \"Bilal\", \"Bill\", \"Billy\", \"Binod\", \"Bjorn\", \"Blaike\", \"Blaine\", \"Blair\", \"Blaire\", \"Blake\", \"Blazej\", \"Blazey\", \"Blessing\", \"Blue\", \"Blyth\", \"Bo\", \"Boab\", \"Bob\", \"Bobby\", \"Bobby-Lee\", \"Bodhan\", \"Boedyn\", \"Bogdan\", \"Bohbi\", \"Bony\", \"Bowen\", \"Bowie\", \"Boyd\", \"Bracken\", \"Brad\", \"Bradan\", \"Braden\", \"Bradley\", \"Bradlie\", \"Bradly\", \"Brady\", \"Bradyn\", \"Braeden\", \"Braiden\", \"Brajan\", \"Brandan\", \"Branden\", \"Brandon\", \"Brandonlee\", \"Brandon-Lee\", \"Brandyn\", \"Brannan\", \"Brayden\", \"Braydon\", \"Braydyn\", \"Breandan\", \"Brehme\", \"Brendan\", \"Brendon\", \"Brendyn\", \"Breogan\", \"Bret\", \"Brett\", \"Briaddon\", \"Brian\", \"Brodi\", \"Brodie\", \"Brody\", \"Brogan\", \"Broghan\", \"Brooke\", \"Brooklin\", \"Brooklyn\", \"Bruce\", \"Bruin\", \"Bruno\", \"Brunon\", \"Bryan\", \"Bryce\", \"Bryden\", \"Brydon\", \"Brydon-Craig\", \"Bryn\", \"Brynmor\", \"Bryson\", \"Buddy\", \"Bully\", \"Burak\", \"Burhan\", \"Butali\", \"Butchi\", \"Byron\", \"Cabhan\", \"Cadan\", \"Cade\", \"Caden\", \"Cadon\", \"Cadyn\", \"Caedan\", \"Caedyn\", \"Cael\", \"Caelan\", \"Caelen\", \"Caethan\", \"Cahl\", \"Cahlum\", \"Cai\", \"Caidan\", \"Caiden\", \"Caiden-Paul\", \"Caidyn\", \"Caie\", \"Cailaen\", \"Cailean\", \"Caileb-John\", \"Cailin\", \"Cain\", \"Caine\", \"Cairn\", \"Cal\", \"Calan\", \"Calder\", \"Cale\", \"Calean\", \"Caleb\", \"Calen\", \"Caley\", \"Calib\", \"Calin\", \"Callahan\", \"Callan\", \"Callan-Adam\", \"Calley\", \"Callie\", \"Callin\", \"Callum\", \"Callun\", \"Callyn\", \"Calum\", \"Calum-James\", \"Calvin\", \"Cambell\", \"Camerin\", \"Cameron\", \"Campbel\", \"Campbell\", \"Camron\", \"Caolain\", \"Caolan\", \"Carl\", \"Carlo\", \"Carlos\", \"Carrich\", \"Carrick\", \"Carson\", \"Carter\", \"Carwyn\", \"Casey\", \"Casper\", \"Cassy\", \"Cathal\", \"Cator\", \"Cavan\", \"Cayden\", \"Cayden-Robert\", \"Cayden-Tiamo\", \"Ceejay\", \"Ceilan\", \"Ceiran\", \"Ceirin\", \"Ceiron\", \"Cejay\", \"Celik\", \"Cephas\", \"Cesar\", \"Cesare\", \"Chad\", \"Chaitanya\", \"Chang-Ha\", \"Charles\", \"Charley\", \"Charlie\", \"Charly\", \"Chase\", \"Che\", \"Chester\", \"Chevy\", \"Chi\", \"Chibudom\", \"Chidera\", \"Chimsom\", \"Chin\", \"Chintu\", \"Chiqal\", \"Chiron\", \"Chris\", \"Chris-Daniel\", \"Chrismedi\", \"Christian\", \"Christie\", \"Christoph\", \"Christopher\", \"Christopher-Lee\", \"Christy\", \"Chu\", \"Chukwuemeka\", \"Cian\", \"Ciann\", \"Ciar\", \"Ciaran\", \"Ciarian\", \"Cieran\", \"Cillian\", \"Cillin\", \"Cinar\", \"CJ\", \"C-Jay\", \"Clark\", \"Clarke\", \"Clayton\", \"Clement\", \"Clifford\", \"Clyde\", \"Cobain\", \"Coban\", \"Coben\", \"Cobi\", \"Cobie\", \"Coby\", \"Codey\", \"Codi\", \"Codie\", \"Cody\", \"Cody-Lee\", \"Coel\", \"Cohan\", \"Cohen\", \"Colby\", \"Cole\", \"Colin\", \"Coll\", \"Colm\", \"Colt\", \"Colton\", \"Colum\", \"Colvin\", \"Comghan\", \"Conal\", \"Conall\", \"Conan\", \"Conar\", \"Conghaile\", \"Conlan\", \"Conley\", \"Conli\", \"Conlin\", \"Conlly\", \"Conlon\", \"Conlyn\", \"Connal\", \"Connall\", \"Connan\", \"Connar\", \"Connel\", \"Connell\", \"Conner\", \"Connolly\", \"Connor\", \"Connor-David\", \"Conor\", \"Conrad\", \"Cooper\", \"Copeland\", \"Coray\", \"Corben\", \"Corbin\", \"Corey\", \"Corey-James\", \"Corey-Jay\", \"Cori\", \"Corie\", \"Corin\", \"Cormac\", \"Cormack\", \"Cormak\", \"Corran\", \"Corrie\", \"Cory\", \"Cosmo\", \"Coupar\", \"Craig\", \"Craig-James\", \"Crawford\", \"Creag\", \"Crispin\", \"Cristian\", \"Crombie\", \"Cruiz\", \"Cruz\", \"Cuillin\", \"Cullen\", \"Cullin\", \"Curtis\", \"Cyrus\", \"Daanyaal\", \"Daegan\", \"Daegyu\", \"Dafydd\", \"Dagon\", \"Dailey\", \"Daimhin\", \"Daithi\", \"Dakota\", \"Daksh\", \"Dale\", \"Dalong\", \"Dalton\", \"Damian\", \"Damien\", \"Damon\", \"Dan\", \"Danar\", \"Dane\", \"Danial\", \"Daniel\", \"Daniele\", \"Daniel-James\", \"Daniels\", \"Daniil\", \"Danish\", \"Daniyal\", \"Danniel\", \"Danny\", \"Dante\", \"Danyal\", \"Danyil\", \"Danys\", \"Daood\", \"Dara\", \"Darach\", \"Daragh\", \"Darcy\", \"D'arcy\", \"Dareh\", \"Daren\", \"Darien\", \"Darius\", \"Darl\", \"Darn\", \"Darrach\", \"Darragh\", \"Darrel\", \"Darrell\", \"Darren\", \"Darrie\", \"Darrius\", \"Darroch\", \"Darryl\", \"Darryn\", \"Darwyn\", \"Daryl\", \"Daryn\", \"Daud\", \"Daumantas\", \"Davi\", \"David\", \"David-Jay\"]\r",
+                  "\r",
+                  "// var firstname = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "// var lastName = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "var firstname = names[Math.floor(Math.random() * names.length)];\r",
+                  "var lastName =  names[Math.floor(Math.random() * names.length)];\r",
+                  "\r",
+                  "var d = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "var dob = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "\r",
+                  "var dateNow = moment(new Date()).format('YYYY-MM-DD')\r",
+                  "var phone = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var momo = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var phoneSecondary = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "\r",
+                  "// function randomDate(start, end) {\r",
+                  "//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+                  "// }\r",
+                  "\r",
+                  "// const d = randomDate(new Date(2012, 0, 1), new Date());\r",
+                  "// console.log(d);\r",
+                  "\r",
+                  "var fullName = firstname+' '+lastName\r",
+                  "\r",
+                  "\r",
+                  "pm.variables.set('name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('company_name', JSON.stringify(fullName+' Company'))\r",
+                  "pm.variables.set('dob', JSON.stringify(dob))\r",
+                  "pm.variables.set('mobile_no', \"251394331\"/*JSON.stringify(phone)*/ )\r",
+                  "pm.variables.set('password', JSON.stringify('1234566789'))\r",
+                  "pm.variables.set('email', JSON.stringify(phone+'@insta.com'))\r",
+                  "pm.variables.set('is_active', true)\r",
+                  "pm.variables.set('account_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primei_acc_num', JSON.stringify(phone))\r",
+                  "pm.variables.set('business_address', JSON.stringify(fullName+' Address'))\r",
+                  "pm.variables.set('business_email', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('mobile_money_number', JSON.stringify(momo))\r",
+                  "pm.variables.set('nature_of_business', JSON.stringify(firstname))\r",
+                  "pm.variables.set('number_of_outlets', Math.ceil(Math.random(19999)))\r",
+                  "pm.variables.set('business_reg_no', JSON.stringify(momo))\r",
+                  "pm.variables.set('primary_contact_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primary_contact_mobile', JSON.stringify(phone))\r",
+                  "pm.variables.set('primary_email_address', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('secondary_contact_name', JSON.stringify(firstname+lastName))\r",
+                  "pm.variables.set('secondary_contact_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('secondary_email_address', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('next_of_kin_name', JSON.stringify(firstname+' '+lastName))\r",
+                  "pm.variables.set('next_of_kin_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('next_of_kin_email', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('declaration_agreement', true)\r",
+                  "pm.variables.set('consent_date', JSON.stringify(dateNow))"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": {{name}},\r\n    \"company_name\": {{company_name}},\r\n    \"dob\": {{dob}},\r\n    \"mobile_no\": {{mobile_no}},\r\n    \"password\": {{password}},\r\n    \"email\": {{email}},\r\n    \"is_active\": {{is_active}},\r\n    \"account_name\" : {{account_name}},\r\n    \"primei_acc_num\" : {{primei_acc_num}},\r\n    \"business_address\" : {{business_address}},\r\n    \"business_email\" : {{business_email}},\r\n    \"mobile_money_number\" : {{mobile_money_number}},\r\n    \"nature_of_business\" : {{nature_of_business}},\r\n    \"number_of_outlets\" : {{number_of_outlets}},\r\n    \"business_reg_no\" : {{business_reg_no}},\r\n    \"primary_contact_name\" : {{primary_contact_name}},\r\n    \"primary_contact_mobile\" : {{primary_contact_mobile}},\r\n    \"primary_email_address\" : {{primary_email_address}},\r\n    \"secondary_contact_name\" : {{secondary_contact_name}},\r\n    \"secondary_contact_mobile\" : {{secondary_contact_mobile}},\r\n    \"secondary_email_address\" : {{secondary_email_address}},\r\n    \"next_of_kin_name\" : {{next_of_kin_name}},\r\n    \"next_of_kin_mobile\" : {{next_of_kin_mobile}},\r\n    \"next_of_kin_email\" : {{next_of_kin_email}},\r\n    \"declaration_agreement\" : {{declaration_agreement}},\r\n    \"consent_date\" : {{consent_date}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/agents/approve",
+              "host": ["{{apiUrl}}api"],
+              "path": ["agents", "approve"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "View Agent Details",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const moment = require(\"moment\")\r",
+                  "var names = [\"Aaran\", \"Aaren\", \"Aarez\", \"Aarman\", \"Aaron\", \"Aaron-James\", \"Aarron\", \"Aaryan\", \"Aaryn\", \"Aayan\", \"Aazaan\", \"Abaan\", \"Abbas\", \"Abdallah\", \"Abdalroof\", \"Abdihakim\", \"Abdirahman\", \"Abdisalam\", \"Abdul\", \"Abdul-Aziz\", \"Abdulbasir\", \"Abdulkadir\", \"Abdulkarem\", \"Abdulkhader\", \"Abdullah\", \"Abdul-Majeed\", \"Abdulmalik\", \"Abdul-Rehman\", \"Abdur\", \"Abdurraheem\", \"Abdur-Rahman\", \"Abdur-Rehmaan\", \"Abel\", \"Abhinav\", \"Abhisumant\", \"Abid\", \"Abir\", \"Abraham\", \"Abu\", \"Abubakar\", \"Ace\", \"Adain\", \"Adam\", \"Adam-James\", \"Addison\", \"Addisson\", \"Adegbola\", \"Adegbolahan\", \"Aden\", \"Adenn\", \"Adie\", \"Adil\", \"Aditya\", \"Adnan\", \"Adrian\", \"Adrien\", \"Aedan\", \"Aedin\", \"Aedyn\", \"Aeron\", \"Afonso\", \"Ahmad\", \"Ahmed\", \"Ahmed-Aziz\", \"Ahoua\", \"Ahtasham\", \"Aiadan\", \"Aidan\", \"Aiden\", \"Aiden-Jack\", \"Aiden-Vee\", \"Aidian\", \"Aidy\", \"Ailin\", \"Aiman\", \"Ainsley\", \"Ainslie\", \"Airen\", \"Airidas\", \"Airlie\", \"AJ\", \"Ajay\", \"A-Jay\", \"Ajayraj\", \"Akan\", \"Akram\", \"Al\", \"Ala\", \"Alan\", \"Alanas\", \"Alasdair\", \"Alastair\", \"Alber\", \"Albert\", \"Albie\", \"Aldred\", \"Alec\", \"Aled\", \"Aleem\", \"Aleksandar\", \"Aleksander\", \"Aleksandr\", \"Aleksandrs\", \"Alekzander\", \"Alessandro\", \"Alessio\", \"Alex\", \"Alexander\", \"Alexei\", \"Alexx\", \"Alexzander\", \"Alf\", \"Alfee\", \"Alfie\", \"Alfred\", \"Alfy\", \"Alhaji\", \"Al-Hassan\", \"Ali\", \"Aliekber\", \"Alieu\", \"Alihaider\", \"Alisdair\", \"Alishan\", \"Alistair\", \"Alistar\", \"Alister\", \"Aliyaan\", \"Allan\", \"Allan-Laiton\", \"Allen\", \"Allesandro\", \"Allister\", \"Ally\", \"Alphonse\", \"Altyiab\", \"Alum\", \"Alvern\", \"Alvin\", \"Alyas\", \"Amaan\", \"Aman\", \"Amani\", \"Ambanimoh\", \"Ameer\", \"Amgad\", \"Ami\", \"Amin\", \"Amir\", \"Ammaar\", \"Ammar\", \"Ammer\", \"Amolpreet\", \"Amos\", \"Amrinder\", \"Amrit\", \"Amro\", \"Anay\", \"Andrea\", \"Andreas\", \"Andrei\", \"Andrejs\", \"Andrew\", \"Andy\", \"Anees\", \"Anesu\", \"Angel\", \"Angelo\", \"Angus\", \"Anir\", \"Anis\", \"Anish\", \"Anmolpreet\", \"Annan\", \"Anndra\", \"Anselm\", \"Anthony\", \"Anthony-John\", \"Antoine\", \"Anton\", \"Antoni\", \"Antonio\", \"Antony\", \"Antonyo\", \"Anubhav\", \"Aodhan\", \"Aon\", \"Aonghus\", \"Apisai\", \"Arafat\", \"Aran\", \"Arandeep\", \"Arann\", \"Aray\", \"Arayan\", \"Archibald\", \"Archie\", \"Arda\", \"Ardal\", \"Ardeshir\", \"Areeb\", \"Areez\", \"Aref\", \"Arfin\", \"Argyle\", \"Argyll\", \"Ari\", \"Aria\", \"Arian\", \"Arihant\", \"Aristomenis\", \"Aristotelis\", \"Arjuna\", \"Arlo\", \"Armaan\", \"Arman\", \"Armen\", \"Arnab\", \"Arnav\", \"Arnold\", \"Aron\", \"Aronas\", \"Arran\", \"Arrham\", \"Arron\", \"Arryn\", \"Arsalan\", \"Artem\", \"Arthur\", \"Artur\", \"Arturo\", \"Arun\", \"Arunas\", \"Arved\", \"Arya\", \"Aryan\", \"Aryankhan\", \"Aryian\", \"Aryn\", \"Asa\", \"Asfhan\", \"Ash\", \"Ashlee-jay\", \"Ashley\", \"Ashton\", \"Ashton-Lloyd\", \"Ashtyn\", \"Ashwin\", \"Asif\", \"Asim\", \"Aslam\", \"Asrar\", \"Ata\", \"Atal\", \"Atapattu\", \"Ateeq\", \"Athol\", \"Athon\", \"Athos-Carlos\", \"Atli\", \"Atom\", \"Attila\", \"Aulay\", \"Aun\", \"Austen\", \"Austin\", \"Avani\", \"Averon\", \"Avi\", \"Avinash\", \"Avraham\", \"Awais\", \"Awwal\", \"Axel\", \"Ayaan\", \"Ayan\", \"Aydan\", \"Ayden\", \"Aydin\", \"Aydon\", \"Ayman\", \"Ayomide\", \"Ayren\", \"Ayrton\", \"Aytug\", \"Ayub\", \"Ayyub\", \"Azaan\", \"Azedine\", \"Azeem\", \"Azim\", \"Aziz\", \"Azlan\", \"Azzam\", \"Azzedine\", \"Babatunmise\", \"Babur\", \"Bader\", \"Badr\", \"Badsha\", \"Bailee\", \"Bailey\", \"Bailie\", \"Bailley\", \"Baillie\", \"Baley\", \"Balian\", \"Banan\", \"Barath\", \"Barkley\", \"Barney\", \"Baron\", \"Barrie\", \"Barry\", \"Bartlomiej\", \"Bartosz\", \"Basher\", \"Basile\", \"Baxter\", \"Baye\", \"Bayley\", \"Beau\", \"Beinn\", \"Bekim\", \"Believe\", \"Ben\", \"Bendeguz\", \"Benedict\", \"Benjamin\", \"Benjamyn\", \"Benji\", \"Benn\", \"Bennett\", \"Benny\", \"Benoit\", \"Bentley\", \"Berkay\", \"Bernard\", \"Bertie\", \"Bevin\", \"Bezalel\", \"Bhaaldeen\", \"Bharath\", \"Bilal\", \"Bill\", \"Billy\", \"Binod\", \"Bjorn\", \"Blaike\", \"Blaine\", \"Blair\", \"Blaire\", \"Blake\", \"Blazej\", \"Blazey\", \"Blessing\", \"Blue\", \"Blyth\", \"Bo\", \"Boab\", \"Bob\", \"Bobby\", \"Bobby-Lee\", \"Bodhan\", \"Boedyn\", \"Bogdan\", \"Bohbi\", \"Bony\", \"Bowen\", \"Bowie\", \"Boyd\", \"Bracken\", \"Brad\", \"Bradan\", \"Braden\", \"Bradley\", \"Bradlie\", \"Bradly\", \"Brady\", \"Bradyn\", \"Braeden\", \"Braiden\", \"Brajan\", \"Brandan\", \"Branden\", \"Brandon\", \"Brandonlee\", \"Brandon-Lee\", \"Brandyn\", \"Brannan\", \"Brayden\", \"Braydon\", \"Braydyn\", \"Breandan\", \"Brehme\", \"Brendan\", \"Brendon\", \"Brendyn\", \"Breogan\", \"Bret\", \"Brett\", \"Briaddon\", \"Brian\", \"Brodi\", \"Brodie\", \"Brody\", \"Brogan\", \"Broghan\", \"Brooke\", \"Brooklin\", \"Brooklyn\", \"Bruce\", \"Bruin\", \"Bruno\", \"Brunon\", \"Bryan\", \"Bryce\", \"Bryden\", \"Brydon\", \"Brydon-Craig\", \"Bryn\", \"Brynmor\", \"Bryson\", \"Buddy\", \"Bully\", \"Burak\", \"Burhan\", \"Butali\", \"Butchi\", \"Byron\", \"Cabhan\", \"Cadan\", \"Cade\", \"Caden\", \"Cadon\", \"Cadyn\", \"Caedan\", \"Caedyn\", \"Cael\", \"Caelan\", \"Caelen\", \"Caethan\", \"Cahl\", \"Cahlum\", \"Cai\", \"Caidan\", \"Caiden\", \"Caiden-Paul\", \"Caidyn\", \"Caie\", \"Cailaen\", \"Cailean\", \"Caileb-John\", \"Cailin\", \"Cain\", \"Caine\", \"Cairn\", \"Cal\", \"Calan\", \"Calder\", \"Cale\", \"Calean\", \"Caleb\", \"Calen\", \"Caley\", \"Calib\", \"Calin\", \"Callahan\", \"Callan\", \"Callan-Adam\", \"Calley\", \"Callie\", \"Callin\", \"Callum\", \"Callun\", \"Callyn\", \"Calum\", \"Calum-James\", \"Calvin\", \"Cambell\", \"Camerin\", \"Cameron\", \"Campbel\", \"Campbell\", \"Camron\", \"Caolain\", \"Caolan\", \"Carl\", \"Carlo\", \"Carlos\", \"Carrich\", \"Carrick\", \"Carson\", \"Carter\", \"Carwyn\", \"Casey\", \"Casper\", \"Cassy\", \"Cathal\", \"Cator\", \"Cavan\", \"Cayden\", \"Cayden-Robert\", \"Cayden-Tiamo\", \"Ceejay\", \"Ceilan\", \"Ceiran\", \"Ceirin\", \"Ceiron\", \"Cejay\", \"Celik\", \"Cephas\", \"Cesar\", \"Cesare\", \"Chad\", \"Chaitanya\", \"Chang-Ha\", \"Charles\", \"Charley\", \"Charlie\", \"Charly\", \"Chase\", \"Che\", \"Chester\", \"Chevy\", \"Chi\", \"Chibudom\", \"Chidera\", \"Chimsom\", \"Chin\", \"Chintu\", \"Chiqal\", \"Chiron\", \"Chris\", \"Chris-Daniel\", \"Chrismedi\", \"Christian\", \"Christie\", \"Christoph\", \"Christopher\", \"Christopher-Lee\", \"Christy\", \"Chu\", \"Chukwuemeka\", \"Cian\", \"Ciann\", \"Ciar\", \"Ciaran\", \"Ciarian\", \"Cieran\", \"Cillian\", \"Cillin\", \"Cinar\", \"CJ\", \"C-Jay\", \"Clark\", \"Clarke\", \"Clayton\", \"Clement\", \"Clifford\", \"Clyde\", \"Cobain\", \"Coban\", \"Coben\", \"Cobi\", \"Cobie\", \"Coby\", \"Codey\", \"Codi\", \"Codie\", \"Cody\", \"Cody-Lee\", \"Coel\", \"Cohan\", \"Cohen\", \"Colby\", \"Cole\", \"Colin\", \"Coll\", \"Colm\", \"Colt\", \"Colton\", \"Colum\", \"Colvin\", \"Comghan\", \"Conal\", \"Conall\", \"Conan\", \"Conar\", \"Conghaile\", \"Conlan\", \"Conley\", \"Conli\", \"Conlin\", \"Conlly\", \"Conlon\", \"Conlyn\", \"Connal\", \"Connall\", \"Connan\", \"Connar\", \"Connel\", \"Connell\", \"Conner\", \"Connolly\", \"Connor\", \"Connor-David\", \"Conor\", \"Conrad\", \"Cooper\", \"Copeland\", \"Coray\", \"Corben\", \"Corbin\", \"Corey\", \"Corey-James\", \"Corey-Jay\", \"Cori\", \"Corie\", \"Corin\", \"Cormac\", \"Cormack\", \"Cormak\", \"Corran\", \"Corrie\", \"Cory\", \"Cosmo\", \"Coupar\", \"Craig\", \"Craig-James\", \"Crawford\", \"Creag\", \"Crispin\", \"Cristian\", \"Crombie\", \"Cruiz\", \"Cruz\", \"Cuillin\", \"Cullen\", \"Cullin\", \"Curtis\", \"Cyrus\", \"Daanyaal\", \"Daegan\", \"Daegyu\", \"Dafydd\", \"Dagon\", \"Dailey\", \"Daimhin\", \"Daithi\", \"Dakota\", \"Daksh\", \"Dale\", \"Dalong\", \"Dalton\", \"Damian\", \"Damien\", \"Damon\", \"Dan\", \"Danar\", \"Dane\", \"Danial\", \"Daniel\", \"Daniele\", \"Daniel-James\", \"Daniels\", \"Daniil\", \"Danish\", \"Daniyal\", \"Danniel\", \"Danny\", \"Dante\", \"Danyal\", \"Danyil\", \"Danys\", \"Daood\", \"Dara\", \"Darach\", \"Daragh\", \"Darcy\", \"D'arcy\", \"Dareh\", \"Daren\", \"Darien\", \"Darius\", \"Darl\", \"Darn\", \"Darrach\", \"Darragh\", \"Darrel\", \"Darrell\", \"Darren\", \"Darrie\", \"Darrius\", \"Darroch\", \"Darryl\", \"Darryn\", \"Darwyn\", \"Daryl\", \"Daryn\", \"Daud\", \"Daumantas\", \"Davi\", \"David\", \"David-Jay\"]\r",
+                  "\r",
+                  "// var firstname = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "// var lastName = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "var firstname = names[Math.floor(Math.random() * names.length)];\r",
+                  "var lastName =  names[Math.floor(Math.random() * names.length)];\r",
+                  "\r",
+                  "var d = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "var dob = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "\r",
+                  "var dateNow = moment.now().format('YYYY-MM-DD')\r",
+                  "var phone = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var momo = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var phoneSecondary = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "\r",
+                  "console.log(phone)\r",
+                  "\r",
+                  "// function randomDate(start, end) {\r",
+                  "//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+                  "// }\r",
+                  "\r",
+                  "// const d = randomDate(new Date(2012, 0, 1), new Date());\r",
+                  "console.log(d);\r",
+                  "\r",
+                  "var fullName = firstname+' '+lastName\r",
+                  "\r",
+                  "\r",
+                  "pm.variables.set('name', fullName)\r",
+                  "pm.variables.set('company_name', fullName+ 'Company')\r",
+                  "pm.variables.set('dob', dob)\r",
+                  "pm.variables.set('mobile_no', phone )\r",
+                  "pm.variables.set('password', '1234566789')\r",
+                  "pm.variables.set('email', phone+'@insta.com')\r",
+                  "pm.variables.set('is_active', true)\r",
+                  "pm.variables.set('account_name', fullName)\r",
+                  "pm.variables.set('primei_acc_num', phone)\r",
+                  "pm.variables.set('business_address', fullName+' Address')\r",
+                  "pm.variables.set('business_email', phone+'@gmail.com')\r",
+                  "pm.variables.set('mobile_money_number', momo)\r",
+                  "pm.variables.set('nature_of_business', firstname)\r",
+                  "pm.variables.set('number_of_outlets', Math.ceil(Math.random(19999)))\r",
+                  "pm.variables.set('business_reg_no', phone+momo)\r",
+                  "pm.variables.set('primary_contact_name', fullName)\r",
+                  "pm.variables.set('primary_contact_mobile', phone)\r",
+                  "pm.variables.set('primary_email_address', phone+'@gmail.com')\r",
+                  "pm.variables.set('secondary_contact_name', firstname+lastName)\r",
+                  "pm.variables.set('secondary_contact_mobile', phoneSecondary)\r",
+                  "pm.variables.set('secondary_email_address', phoneSecondary+'@mail.com')\r",
+                  "pm.variables.set('next_of_kin_name', firstname+''+lastName)\r",
+                  "pm.variables.set('next_of_kin_mobile', phoneSecondary)\r",
+                  "pm.variables.set('next_of_kin_email', phoneSecondary+'@mail.com')\r",
+                  "pm.variables.set('declaration_agreement', true)\r",
+                  "pm.variables.set('consent_date', dateNow)"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}api/agents",
+              "host": ["{{apiUrl}}api"],
+              "path": ["agents"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get Loans Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}api/products",
+              "host": ["{{apiUrl}}api"],
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Products",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const moment = require(\"moment\")\r",
+                  "var names = [\"Aaran\", \"Aaren\", \"Aarez\", \"Aarman\", \"Aaron\", \"Aaron-James\", \"Aarron\", \"Aaryan\", \"Aaryn\", \"Aayan\", \"Aazaan\", \"Abaan\", \"Abbas\", \"Abdallah\", \"Abdalroof\", \"Abdihakim\", \"Abdirahman\", \"Abdisalam\", \"Abdul\", \"Abdul-Aziz\", \"Abdulbasir\", \"Abdulkadir\", \"Abdulkarem\", \"Abdulkhader\", \"Abdullah\", \"Abdul-Majeed\", \"Abdulmalik\", \"Abdul-Rehman\", \"Abdur\", \"Abdurraheem\", \"Abdur-Rahman\", \"Abdur-Rehmaan\", \"Abel\", \"Abhinav\", \"Abhisumant\", \"Abid\", \"Abir\", \"Abraham\", \"Abu\", \"Abubakar\", \"Ace\", \"Adain\", \"Adam\", \"Adam-James\", \"Addison\", \"Addisson\", \"Adegbola\", \"Adegbolahan\", \"Aden\", \"Adenn\", \"Adie\", \"Adil\", \"Aditya\", \"Adnan\", \"Adrian\", \"Adrien\", \"Aedan\", \"Aedin\", \"Aedyn\", \"Aeron\", \"Afonso\", \"Ahmad\", \"Ahmed\", \"Ahmed-Aziz\", \"Ahoua\", \"Ahtasham\", \"Aiadan\", \"Aidan\", \"Aiden\", \"Aiden-Jack\", \"Aiden-Vee\", \"Aidian\", \"Aidy\", \"Ailin\", \"Aiman\", \"Ainsley\", \"Ainslie\", \"Airen\", \"Airidas\", \"Airlie\", \"AJ\", \"Ajay\", \"A-Jay\", \"Ajayraj\", \"Akan\", \"Akram\", \"Al\", \"Ala\", \"Alan\", \"Alanas\", \"Alasdair\", \"Alastair\", \"Alber\", \"Albert\", \"Albie\", \"Aldred\", \"Alec\", \"Aled\", \"Aleem\", \"Aleksandar\", \"Aleksander\", \"Aleksandr\", \"Aleksandrs\", \"Alekzander\", \"Alessandro\", \"Alessio\", \"Alex\", \"Alexander\", \"Alexei\", \"Alexx\", \"Alexzander\", \"Alf\", \"Alfee\", \"Alfie\", \"Alfred\", \"Alfy\", \"Alhaji\", \"Al-Hassan\", \"Ali\", \"Aliekber\", \"Alieu\", \"Alihaider\", \"Alisdair\", \"Alishan\", \"Alistair\", \"Alistar\", \"Alister\", \"Aliyaan\", \"Allan\", \"Allan-Laiton\", \"Allen\", \"Allesandro\", \"Allister\", \"Ally\", \"Alphonse\", \"Altyiab\", \"Alum\", \"Alvern\", \"Alvin\", \"Alyas\", \"Amaan\", \"Aman\", \"Amani\", \"Ambanimoh\", \"Ameer\", \"Amgad\", \"Ami\", \"Amin\", \"Amir\", \"Ammaar\", \"Ammar\", \"Ammer\", \"Amolpreet\", \"Amos\", \"Amrinder\", \"Amrit\", \"Amro\", \"Anay\", \"Andrea\", \"Andreas\", \"Andrei\", \"Andrejs\", \"Andrew\", \"Andy\", \"Anees\", \"Anesu\", \"Angel\", \"Angelo\", \"Angus\", \"Anir\", \"Anis\", \"Anish\", \"Anmolpreet\", \"Annan\", \"Anndra\", \"Anselm\", \"Anthony\", \"Anthony-John\", \"Antoine\", \"Anton\", \"Antoni\", \"Antonio\", \"Antony\", \"Antonyo\", \"Anubhav\", \"Aodhan\", \"Aon\", \"Aonghus\", \"Apisai\", \"Arafat\", \"Aran\", \"Arandeep\", \"Arann\", \"Aray\", \"Arayan\", \"Archibald\", \"Archie\", \"Arda\", \"Ardal\", \"Ardeshir\", \"Areeb\", \"Areez\", \"Aref\", \"Arfin\", \"Argyle\", \"Argyll\", \"Ari\", \"Aria\", \"Arian\", \"Arihant\", \"Aristomenis\", \"Aristotelis\", \"Arjuna\", \"Arlo\", \"Armaan\", \"Arman\", \"Armen\", \"Arnab\", \"Arnav\", \"Arnold\", \"Aron\", \"Aronas\", \"Arran\", \"Arrham\", \"Arron\", \"Arryn\", \"Arsalan\", \"Artem\", \"Arthur\", \"Artur\", \"Arturo\", \"Arun\", \"Arunas\", \"Arved\", \"Arya\", \"Aryan\", \"Aryankhan\", \"Aryian\", \"Aryn\", \"Asa\", \"Asfhan\", \"Ash\", \"Ashlee-jay\", \"Ashley\", \"Ashton\", \"Ashton-Lloyd\", \"Ashtyn\", \"Ashwin\", \"Asif\", \"Asim\", \"Aslam\", \"Asrar\", \"Ata\", \"Atal\", \"Atapattu\", \"Ateeq\", \"Athol\", \"Athon\", \"Athos-Carlos\", \"Atli\", \"Atom\", \"Attila\", \"Aulay\", \"Aun\", \"Austen\", \"Austin\", \"Avani\", \"Averon\", \"Avi\", \"Avinash\", \"Avraham\", \"Awais\", \"Awwal\", \"Axel\", \"Ayaan\", \"Ayan\", \"Aydan\", \"Ayden\", \"Aydin\", \"Aydon\", \"Ayman\", \"Ayomide\", \"Ayren\", \"Ayrton\", \"Aytug\", \"Ayub\", \"Ayyub\", \"Azaan\", \"Azedine\", \"Azeem\", \"Azim\", \"Aziz\", \"Azlan\", \"Azzam\", \"Azzedine\", \"Babatunmise\", \"Babur\", \"Bader\", \"Badr\", \"Badsha\", \"Bailee\", \"Bailey\", \"Bailie\", \"Bailley\", \"Baillie\", \"Baley\", \"Balian\", \"Banan\", \"Barath\", \"Barkley\", \"Barney\", \"Baron\", \"Barrie\", \"Barry\", \"Bartlomiej\", \"Bartosz\", \"Basher\", \"Basile\", \"Baxter\", \"Baye\", \"Bayley\", \"Beau\", \"Beinn\", \"Bekim\", \"Believe\", \"Ben\", \"Bendeguz\", \"Benedict\", \"Benjamin\", \"Benjamyn\", \"Benji\", \"Benn\", \"Bennett\", \"Benny\", \"Benoit\", \"Bentley\", \"Berkay\", \"Bernard\", \"Bertie\", \"Bevin\", \"Bezalel\", \"Bhaaldeen\", \"Bharath\", \"Bilal\", \"Bill\", \"Billy\", \"Binod\", \"Bjorn\", \"Blaike\", \"Blaine\", \"Blair\", \"Blaire\", \"Blake\", \"Blazej\", \"Blazey\", \"Blessing\", \"Blue\", \"Blyth\", \"Bo\", \"Boab\", \"Bob\", \"Bobby\", \"Bobby-Lee\", \"Bodhan\", \"Boedyn\", \"Bogdan\", \"Bohbi\", \"Bony\", \"Bowen\", \"Bowie\", \"Boyd\", \"Bracken\", \"Brad\", \"Bradan\", \"Braden\", \"Bradley\", \"Bradlie\", \"Bradly\", \"Brady\", \"Bradyn\", \"Braeden\", \"Braiden\", \"Brajan\", \"Brandan\", \"Branden\", \"Brandon\", \"Brandonlee\", \"Brandon-Lee\", \"Brandyn\", \"Brannan\", \"Brayden\", \"Braydon\", \"Braydyn\", \"Breandan\", \"Brehme\", \"Brendan\", \"Brendon\", \"Brendyn\", \"Breogan\", \"Bret\", \"Brett\", \"Briaddon\", \"Brian\", \"Brodi\", \"Brodie\", \"Brody\", \"Brogan\", \"Broghan\", \"Brooke\", \"Brooklin\", \"Brooklyn\", \"Bruce\", \"Bruin\", \"Bruno\", \"Brunon\", \"Bryan\", \"Bryce\", \"Bryden\", \"Brydon\", \"Brydon-Craig\", \"Bryn\", \"Brynmor\", \"Bryson\", \"Buddy\", \"Bully\", \"Burak\", \"Burhan\", \"Butali\", \"Butchi\", \"Byron\", \"Cabhan\", \"Cadan\", \"Cade\", \"Caden\", \"Cadon\", \"Cadyn\", \"Caedan\", \"Caedyn\", \"Cael\", \"Caelan\", \"Caelen\", \"Caethan\", \"Cahl\", \"Cahlum\", \"Cai\", \"Caidan\", \"Caiden\", \"Caiden-Paul\", \"Caidyn\", \"Caie\", \"Cailaen\", \"Cailean\", \"Caileb-John\", \"Cailin\", \"Cain\", \"Caine\", \"Cairn\", \"Cal\", \"Calan\", \"Calder\", \"Cale\", \"Calean\", \"Caleb\", \"Calen\", \"Caley\", \"Calib\", \"Calin\", \"Callahan\", \"Callan\", \"Callan-Adam\", \"Calley\", \"Callie\", \"Callin\", \"Callum\", \"Callun\", \"Callyn\", \"Calum\", \"Calum-James\", \"Calvin\", \"Cambell\", \"Camerin\", \"Cameron\", \"Campbel\", \"Campbell\", \"Camron\", \"Caolain\", \"Caolan\", \"Carl\", \"Carlo\", \"Carlos\", \"Carrich\", \"Carrick\", \"Carson\", \"Carter\", \"Carwyn\", \"Casey\", \"Casper\", \"Cassy\", \"Cathal\", \"Cator\", \"Cavan\", \"Cayden\", \"Cayden-Robert\", \"Cayden-Tiamo\", \"Ceejay\", \"Ceilan\", \"Ceiran\", \"Ceirin\", \"Ceiron\", \"Cejay\", \"Celik\", \"Cephas\", \"Cesar\", \"Cesare\", \"Chad\", \"Chaitanya\", \"Chang-Ha\", \"Charles\", \"Charley\", \"Charlie\", \"Charly\", \"Chase\", \"Che\", \"Chester\", \"Chevy\", \"Chi\", \"Chibudom\", \"Chidera\", \"Chimsom\", \"Chin\", \"Chintu\", \"Chiqal\", \"Chiron\", \"Chris\", \"Chris-Daniel\", \"Chrismedi\", \"Christian\", \"Christie\", \"Christoph\", \"Christopher\", \"Christopher-Lee\", \"Christy\", \"Chu\", \"Chukwuemeka\", \"Cian\", \"Ciann\", \"Ciar\", \"Ciaran\", \"Ciarian\", \"Cieran\", \"Cillian\", \"Cillin\", \"Cinar\", \"CJ\", \"C-Jay\", \"Clark\", \"Clarke\", \"Clayton\", \"Clement\", \"Clifford\", \"Clyde\", \"Cobain\", \"Coban\", \"Coben\", \"Cobi\", \"Cobie\", \"Coby\", \"Codey\", \"Codi\", \"Codie\", \"Cody\", \"Cody-Lee\", \"Coel\", \"Cohan\", \"Cohen\", \"Colby\", \"Cole\", \"Colin\", \"Coll\", \"Colm\", \"Colt\", \"Colton\", \"Colum\", \"Colvin\", \"Comghan\", \"Conal\", \"Conall\", \"Conan\", \"Conar\", \"Conghaile\", \"Conlan\", \"Conley\", \"Conli\", \"Conlin\", \"Conlly\", \"Conlon\", \"Conlyn\", \"Connal\", \"Connall\", \"Connan\", \"Connar\", \"Connel\", \"Connell\", \"Conner\", \"Connolly\", \"Connor\", \"Connor-David\", \"Conor\", \"Conrad\", \"Cooper\", \"Copeland\", \"Coray\", \"Corben\", \"Corbin\", \"Corey\", \"Corey-James\", \"Corey-Jay\", \"Cori\", \"Corie\", \"Corin\", \"Cormac\", \"Cormack\", \"Cormak\", \"Corran\", \"Corrie\", \"Cory\", \"Cosmo\", \"Coupar\", \"Craig\", \"Craig-James\", \"Crawford\", \"Creag\", \"Crispin\", \"Cristian\", \"Crombie\", \"Cruiz\", \"Cruz\", \"Cuillin\", \"Cullen\", \"Cullin\", \"Curtis\", \"Cyrus\", \"Daanyaal\", \"Daegan\", \"Daegyu\", \"Dafydd\", \"Dagon\", \"Dailey\", \"Daimhin\", \"Daithi\", \"Dakota\", \"Daksh\", \"Dale\", \"Dalong\", \"Dalton\", \"Damian\", \"Damien\", \"Damon\", \"Dan\", \"Danar\", \"Dane\", \"Danial\", \"Daniel\", \"Daniele\", \"Daniel-James\", \"Daniels\", \"Daniil\", \"Danish\", \"Daniyal\", \"Danniel\", \"Danny\", \"Dante\", \"Danyal\", \"Danyil\", \"Danys\", \"Daood\", \"Dara\", \"Darach\", \"Daragh\", \"Darcy\", \"D'arcy\", \"Dareh\", \"Daren\", \"Darien\", \"Darius\", \"Darl\", \"Darn\", \"Darrach\", \"Darragh\", \"Darrel\", \"Darrell\", \"Darren\", \"Darrie\", \"Darrius\", \"Darroch\", \"Darryl\", \"Darryn\", \"Darwyn\", \"Daryl\", \"Daryn\", \"Daud\", \"Daumantas\", \"Davi\", \"David\", \"David-Jay\"]\r",
+                  "\r",
+                  "// var firstname = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "// var lastName = Math.floor(Math.random() * (1 + names.length - 1))\r",
+                  "var firstname = names[Math.floor(Math.random() * names.length)];\r",
+                  "var lastName =  names[Math.floor(Math.random() * names.length)];\r",
+                  "\r",
+                  "var d = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "var dob = moment(new Date(+(new Date()) - Math.floor(Math.random()*10000000000)))\r",
+                  ".format('YYYY-MM-DD');\r",
+                  "\r",
+                  "var dateNow = moment(new Date()).format('YYYY-MM-DD')\r",
+                  "var phone = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var momo = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "var phoneSecondary = Math.floor(100000000 + Math.random() * 900000000);\r",
+                  "\r",
+                  "// function randomDate(start, end) {\r",
+                  "//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));\r",
+                  "// }\r",
+                  "\r",
+                  "// const d = randomDate(new Date(2012, 0, 1), new Date());\r",
+                  "// console.log(d);\r",
+                  "\r",
+                  "var fullName = firstname+' '+lastName\r",
+                  "\r",
+                  "\r",
+                  "pm.variables.set('name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('company_name', JSON.stringify(fullName+' Company'))\r",
+                  "pm.variables.set('dob', JSON.stringify(dob))\r",
+                  "pm.variables.set('mobile_no', \"251394331\"/*JSON.stringify(phone)*/ )\r",
+                  "pm.variables.set('password', JSON.stringify('1234566789'))\r",
+                  "pm.variables.set('email', JSON.stringify(phone+'@insta.com'))\r",
+                  "pm.variables.set('is_active', true)\r",
+                  "pm.variables.set('account_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primei_acc_num', JSON.stringify(phone))\r",
+                  "pm.variables.set('business_address', JSON.stringify(fullName+' Address'))\r",
+                  "pm.variables.set('business_email', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('mobile_money_number', JSON.stringify(momo))\r",
+                  "pm.variables.set('nature_of_business', JSON.stringify(firstname))\r",
+                  "pm.variables.set('number_of_outlets', Math.ceil(Math.random(19999)))\r",
+                  "pm.variables.set('business_reg_no', JSON.stringify(momo))\r",
+                  "pm.variables.set('primary_contact_name', JSON.stringify(fullName))\r",
+                  "pm.variables.set('primary_contact_mobile', JSON.stringify(phone))\r",
+                  "pm.variables.set('primary_email_address', JSON.stringify(phone+'@gmail.com'))\r",
+                  "pm.variables.set('secondary_contact_name', JSON.stringify(firstname+lastName))\r",
+                  "pm.variables.set('secondary_contact_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('secondary_email_address', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('next_of_kin_name', JSON.stringify(firstname+' '+lastName))\r",
+                  "pm.variables.set('next_of_kin_mobile', JSON.stringify(phoneSecondary))\r",
+                  "pm.variables.set('next_of_kin_email', JSON.stringify(phoneSecondary+'@mail.com'))\r",
+                  "pm.variables.set('declaration_agreement', true)\r",
+                  "pm.variables.set('consent_date', JSON.stringify(dateNow))"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Token 5d083cfb00fdf1d5d2473d0116422567aaa325ff",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/agents/create/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "agents", "create", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Loans Products",
+      "item": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Token 9bb8a5e7fce489c54cf9566d0873c601b2670cde",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"admin@instakash.com\",\r\n    \"password\": \"abc123@iKash\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{apiUrl}}api/users/login/",
+          "host": ["{{apiUrl}}api"],
+          "path": ["users", "login", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtain Token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"admin@instakash.com\",\r\n    \"password\": \"abc123@iKash\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{apiUrl}}api/users/token/",
+          "host": ["{{apiUrl}}api"],
+          "path": ["users", "token", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Auth User",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Authorization",
+            "value": "Token d822d211e6b1dc2d89dcb3bcf4c66080c45c7cc4",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{apiUrl}}api/users/me/",
+          "host": ["{{apiUrl}}api"],
+          "path": ["users", "me", ""]
+        }
+      },
+      "response": []
+    }
+  ]
+}
