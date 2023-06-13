@@ -24,6 +24,7 @@
     "react-dropzone": "^14.2.3",
     "react-install-render": "^1.0.9",
     "render": "^0.1.4",
+    "sharp": "^0.32.1",
     "yup": "^1.0.2"
   },
   "devDependencies": {
