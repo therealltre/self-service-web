@@ -1,4 +1,6 @@
 import axios from "axios";
+import Image from "next/image";
+import instaLogo from "../public/compLogo.png";
 import { useState } from "react";
 import { Button } from "@material-tailwind/react";
 import { useRouter } from "next/router";
@@ -53,11 +55,14 @@ export default function YourComponent() {
       <main className="h-screen flex items-center justify-center w-1/2">
         <div className="flex flex-1 flex-col justify-center m-40 px-6 py-12 lg:px-8 bg-white border border-gray-400 rounded-md shadow-lg">
           <div id="loan-amount" className="sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className="flex justify-center " id="Logo">
+              <Image src={instaLogo} alt="" className="h-[50px] w-[150px]" />
+            </div>
             <h2 className="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Enter Loan Amount
             </h2>
           </div>
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
+          <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-sm ">
             <form
               onSubmit={handleSubmit}
               className=" space-y-6"
